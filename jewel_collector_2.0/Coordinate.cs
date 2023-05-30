@@ -11,5 +11,12 @@ namespace JewelCollector {
         public (int, int) getCoordinate() {
             return (this.x, this.y);
         }
+        
+        public void setCoordinate(int x, int y) {
+            
+            this.x = x;
+            this.y = y;
+
+        }
     }
 }
