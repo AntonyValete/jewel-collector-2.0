@@ -13,8 +13,15 @@ namespace JewelCollector
     }
     public class Water : Obstacle
     {
-        public string displayName = "##";
+        public static string displayName = "##";
+        public static readonly int energyPoints = 3;
 
         public Water(int x, int y, bool collectable) : base(x, y, collectable) { }
+    }
+    public class Radioactive : Obstacle
+    {
+        public static string displayName = "!!";
+        public static readonly int energyPoints = -10;
+        public Radioactive(int x, int y, bool collectable) : base(x, y, collectable) { }
     }
 }

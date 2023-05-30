@@ -5,10 +5,10 @@ namespace JewelCollector
         static void Main(string[] args) {
 
             // criei um robo de teste
-            var testerbot = new Robot(2,2);
+            var testerbot = new Robot(2,2,5);
 
             ConsoleKeyInfo keyinfo; // definição da variavel da tecla pressionada
-            
+            map.Print();
             do {
                 
                 Console.Write("Insira um movimento: ");

@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace JewelCollector {
     public class Robot : Coordinate {   
-
-
-        public Robot(int x, int y): base(x, y) {
+        public static readonly string displayName = "ME";
+        public uint totalEnergy;
+        public Robot(int x, int y, uint totalEnergy): base(x, y) {
             setCoordinate(x, y);
-
+            this.totalEnergy = totalEnergy;
         }
         public void Movement(ConsoleKey key) { // método de movimento vai mudar as coordenadas dependendo da tecla pressionada
             

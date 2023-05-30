@@ -25,6 +25,7 @@ namespace JewelCollector
     {
         public static readonly string displayName = "BJ";
         public static readonly int value = 10;
+        public static readonly int energyPoints = 5;
         public BlueJewel(int x, int y, bool passable, bool collectable) : base(x, y, passable, collectable) { }
     }
 }
