@@ -14,24 +14,19 @@ namespace JewelCollector {
         public void Movement(ConsoleKey key) { // método de movimento vai mudar as coordenadas dependendo da tecla pressionada
             
             (int x, int y) = this.getCoordinate();
-            if (key == ConsoleKey.A) {
-
-                setCoordinate(x-1, y);
-
-            } else if (key == ConsoleKey.D) {
-
-                setCoordinate(x+1, y);
-
-            } else if (key == ConsoleKey.S) {
-
-                setCoordinate(x, y-1);
-
-            } else if (key == ConsoleKey.W) {
-
-                setCoordinate(x, y+1);
-
-            } else {
-                
+            switch (key) {
+                case (ConsoleKey.A):
+                    setCoordinate(x-1, y);
+                    break;
+                case (ConsoleKey.D):
+                    setCoordinate(x+1, y);
+                    break;
+                case (ConsoleKey.S):
+                    setCoordinate(x, y-1);
+                    break;
+                case (ConsoleKey.W):
+                    setCoordinate(x, y+1);
+                    break;
             }
         }
     }
