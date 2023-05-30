@@ -1,23 +1,26 @@
 namespace JewelCollector
 {
-    public abstract class Jewel : gameObject
+    public class RedJewel : gameObject
     {
-        private string color;
-        public Jewel(int x, int y, string displayName, bool passable, bool collectable) : base(x, y, displayName, passable, collectable) { }
+        public static readonly string displayName = "RJ";
+        public static readonly int value = 100;
+        public RedJewel(int x, int y, bool passable, bool collectable) : base(x, y, passable, collectable) { }
+
+        public string getDisplayName()
+        {
+            return RedJewel.displayName;
+        }
     }
-    public class RedJewel : Jewel
+    public class GreenJewel : gameObject
     {
-        private static
-        public RedJewel(int x, int y, string displayName, bool passable, bool collectable) : base(x, y, displayName, passable, collectable) { }
+        public static readonly string displayName = "GJ";
+        public static readonly int value = 50;
+        public GreenJewel(int x, int y, bool passable, bool collectable) : base(x, y, passable, collectable) { }
     }
-    public class GreenJewel : Jewel
+    public class BlueJewel : gameObject
     {
-        public string color = "Green";
-        public int value = 50;
-    }
-    public class BlueJewel : Jewel
-    {
-        public string color = "Blue";
-        public int value = 10;
+        public static readonly string displayName = "BJ";
+        public static readonly int value = 10;
+        public BlueJewel(int x, int y, bool passable, bool collectable) : base(x, y, passable, collectable) { }
     }
 }
