@@ -5,18 +5,32 @@ namespace JewelCollector
         static void Main(string[] args) {
 
             // criei um robo de teste
-            var testerbot = new Robot(2,2,5);
-
+            var testerbot = new Robot(1,1,5);
             ConsoleKeyInfo keyinfo; // definição da variavel da tecla pressionada
-            map.Print();
+            bool gameRunning = true;
+
+            // Prototype declaration of the map array
+            // TODO: implement this inside the Map class, outside of the Main function
+            string[,] mapArray = new string[3,3] {
+                                                {"--","--","--" }, 
+                                                {"--","--","--" }, 
+                                                {"--","--","--" } 
+                                                };
             do {
-                
+                map.Print(mapArray, testerbot);
                 Console.Write("Insira um movimento: ");
                 keyinfo = Console.ReadKey(); // lê o evento do teclado
                 testerbot.Movement(keyinfo.Key); // printa a tecla pressionada
                 Console.WriteLine(testerbot.getCoordinate()); // printa as novas coordenadas
-            }   
-            while (keyinfo.Key != ConsoleKey.X);
+
+                if (keyinfo.Key == ConsoleKey.X)
+                    gameRunning = false; //eXit
+                if (keyinfo.Key == ConsoleKey.R) {
+                    // mapArray[1,1]++;
+                    continue; //reloop to the redraw
+                }
+            } while (gameRunning == true);
+            
 
         }
     }
