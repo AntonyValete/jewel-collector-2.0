@@ -25,8 +25,8 @@ Desenvolver o minigame **Jewel Collector 2.0**, implementado previamente na aula
 
 #### Classe Robot:
 - [ ] Inicia 5 Pontos de energia
-- [ ] deslocamento às 4 direções
-- [ ] perda de 1 ponto de energia com deslocamento
+- [x] deslocamento às 4 direções
+- [x] perda de 1 ponto de energia com deslocamento
 - [ ] Limite de movimentos dentro do mapa
 - [ ] Símbolo "ME"
 - [ ] Quando chegar a zero, o robô não poderá se mover mais; e o jogo termina
