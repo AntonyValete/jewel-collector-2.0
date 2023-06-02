@@ -24,12 +24,12 @@ Desenvolver o minigame **Jewel Collector 2.0**, implementado previamente na aula
 ### Checklist:
 
 #### Classe Robot:
-- [ ] Inicia 5 Pontos de energia
+- [x] Inicia 5 Pontos de energia
 - [x] deslocamento às 4 direções
 - [x] perda de 1 ponto de energia com deslocamento
-- [ ] Limite de movimentos dentro do mapa
-- [ ] Símbolo "ME"
-- [ ] Quando chegar a zero, o robô não poderá se mover mais; e o jogo termina
+- [x] Limite de movimentos dentro do mapa
+- [x] Símbolo "ME"
+- [x] Quando chegar a zero, o robô não poderá se mover mais; e o jogo termina
 
 *O robô interage com o ambiente podendo usar os itens no mapa quando ele estiver em posições adjacentes a estes itens. O efeito do uso depende das características do item. Alguns poderão ser coletados (collect), sendo assim removidos do mapa e guardados na sacola do robô. Outros poderão ser usados pelo robô para recarregar (recharge) sua energia. Para usar (coletar/recarregar) um item, use a tecla g.*
 
@@ -37,35 +37,35 @@ Desenvolver o minigame **Jewel Collector 2.0**, implementado previamente na aula
 - [ ] Para cada comando executado pelo usuário, imprima o estado atual do mapa, a energia do robô, bem como o estado da sacola do robô (evento).
 
 #### Vazio
-- [ ] Símbolo "--"
-- [ ] Fazer swap com o robô com o movimento
+- [x] Símbolo "--"
+- [x] Fazer swap com o robô com o movimento
 - [ ] Aparecer quando uma joia é coletada
 
 
 #### Classe Jewel
 - [ ] Todas as joias serão coletadas após o uso. Utilize o conceito de interface para realizar essas ações.
-- [ ] Coletavel
+- [x] Coletavel
 - [ ] Intranspassavel
 
 ##### Blue
 - [ ] Fornecer 5 pontos de energia pro robô
 - [ ] 10 pontos
-- [ ] Símbolo JB
+- [X] Símbolo JB
 - [ ] recarregavel
 
 ##### Red
 - [ ] Valor de 100 pontos
-- [ ] Símbolo JR
+- [x] Símbolo JR
 
 ##### Green
 - [ ] 50 pontos
-- [ ] Símbolo JG
+- [x] Símbolo JG
 
-#### Classe Obscacle
-- [ ] As joias e os obstáculos são intransponíveis. 
+#### Classe Obstacle
+- [x] As joias e os obstáculos são intransponíveis. 
 
 ##### Water
-- [ ] Símbolo "##"
+- [x] Símbolo "##"
 - [ ] Intranspassavel
 
 ##### Tree
