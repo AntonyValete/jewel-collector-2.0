@@ -1,5 +1,5 @@
 ## Projeto Final para a Disciplina de Programação em C# do curso "Tecnologias Microsoft"
-Desenvolver o minigame <st>Jewel Collector 2.0<st/>, implementado previamente na aula 2. O objetivo dessa nova versão é melhorar o código anterior através da implementação dos novos conceitos e recursos aprendidos até o momento. Cada classe deve estar em um arquivo separado, com o nome NomedaClasse.cs. Particularmente, os seguintes recursos DEVEM NECESSARIAMENTE ser utilizados:
+Desenvolver o minigame **Jewel Collector 2.0**, implementado previamente na aula 2. O objetivo dessa nova versão é melhorar o código anterior através da implementação dos novos conceitos e recursos aprendidos até o momento. Cada classe deve estar em um arquivo separado, com o nome NomedaClasse.cs. Particularmente, os seguintes recursos DEVEM NECESSARIAMENTE ser utilizados:
 
 ### Requisitos na construção do código
 - Devem ser usados, tanto arrays como alguma instância de uma Collection (a seu critério)
@@ -7,7 +7,7 @@ Desenvolver o minigame <st>Jewel Collector 2.0<st/>, implementado previamente na
 - Geração de Documentação Automática: Todas as classes, os métodos públicos das classes utilizadas, bem como os fields públicos devem ser comentados e incluídos na documentação gerada.
 - Implemente o mapa como uma matriz de items (jewels, obstacles, demais elementos mostrados no mapa). Seu código deverá imprimir o mapa de forma simples, como no exemplo abaixo (não necessariamente dessa maneira):
 
-void PrintMap() {
+```void PrintMap() {
 
   for (int i = 0; i < map.GetLength(0); i++) {
     for (int j = 0; j < map.GetLength(1); j++) {
@@ -17,6 +17,7 @@ void PrintMap() {
   }
 
 }
+```
 
 *Note que o uso de polimorfismo se fará necessário, pois a variável map precisará armazenar os diversos tipos de objetos. Dica: Para escrever o objeto na tela, sobrescreva a método ToString em cada classe.*
 
