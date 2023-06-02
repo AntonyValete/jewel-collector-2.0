@@ -15,7 +15,7 @@ namespace JewelCollector
         {
             return (this.x, this.y);
         }
-
+        
         public void setCoordinate(int x, int y)
         {
             this.x = x;

@@ -1,6 +1,6 @@
 namespace JewelCollector
 {
-    public class gameObject : Coordinate
+    public abstract class gameObject : Coordinate
     {
         private bool passable { get; set; }
         private bool collectable { get; set; }
@@ -10,11 +10,18 @@ namespace JewelCollector
             this.passable = passable;
             this.collectable = collectable;
         }
+
+        public abstract string getDisplayName();
     }
 
     public class Empty : gameObject
     {
-         public static readonly string displayName = "--";
-         public Empty(int x, int y, bool passable, bool collectable) : base(x, y, passable, collectable) { }
+        private static readonly string displayName = "--";
+        public Empty(int x, int y, bool passable, bool collectable) : base(x, y, passable, collectable) { }
+
+        public override string getDisplayName()
+        {
+            return displayName;
+        }
     }
 }
