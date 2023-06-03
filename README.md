@@ -29,7 +29,8 @@ Desenvolver o minigame **Jewel Collector 2.0**, implementado previamente na aula
 - [x] perda de 1 ponto de energia com deslocamento
 - [x] Limite de movimentos dentro do mapa
 - [x] Símbolo "ME"
-- [x] Quando chegar a zero, o robô não poderá se mover mais; e o jogo termina
+- [x] Quando chegar a zero, o robô não poderá se mover mais; e o jogo termina]
+- [ ] Bag com quantidade de itens e pontuação
 
 *O robô interage com o ambiente podendo usar os itens no mapa quando ele estiver em posições adjacentes a estes itens. O efeito do uso depende das características do item. Alguns poderão ser coletados (collect), sendo assim removidos do mapa e guardados na sacola do robô. Outros poderão ser usados pelo robô para recarregar (recharge) sua energia. Para usar (coletar/recarregar) um item, use a tecla g.*
 
@@ -48,17 +49,17 @@ Desenvolver o minigame **Jewel Collector 2.0**, implementado previamente na aula
 - [ ] Intranspassavel
 
 ##### Blue
-- [ ] Fornecer 5 pontos de energia pro robô
-- [ ] 10 pontos
+- [x] Fornecer 5 pontos de energia pro robô
+- [x] 10 pontos
 - [X] Símbolo JB
 - [ ] recarregavel
 
 ##### Red
-- [ ] Valor de 100 pontos
+- [x] Valor de 100 pontos
 - [x] Símbolo JR
 
 ##### Green
-- [ ] 50 pontos
+- [x] 50 pontos
 - [x] Símbolo JG
 
 #### Classe Obstacle
@@ -73,7 +74,7 @@ Desenvolver o minigame **Jewel Collector 2.0**, implementado previamente na aula
 
 
 #### Exceções
-- [ ] robô tenta se deslocar para uma posição fora dos limites do mapa;
+- [x] robô tenta se deslocar para uma posição fora dos limites do mapa;
 - [ ] robô tenta se deslocar para uma posição ocupada por outro item;
 - [ ] outras situações que achar pertinente o uso de exceções.
 
@@ -88,9 +89,9 @@ Desenvolver o minigame **Jewel Collector 2.0**, implementado previamente na aula
 
 #### Classe Radiactive
 - [ ] Criar a partir da fase 2
-- [ ] símbolo "!!"
-- [ ] Retirará 10 pontos de energia, caso o robô passe em posições adjacentes.
-- [ ] Elemento será transponível 
+- [x] símbolo "!!"
+- [x] Retirará 10 pontos de energia, caso o robô passe em posições adjacentes.
+- [x] Elemento será transponível 
 - [ ] Caso o robô o transponha, perderá no mínimo 30 pontos de energia e o elemento radioativo desaparecerá do mapa.
 
 
