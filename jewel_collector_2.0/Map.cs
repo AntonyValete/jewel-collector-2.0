@@ -8,7 +8,7 @@ namespace JewelCollector
         private Robot robot;
         public Map(Robot robot)
         {
-            this.map = new gameObject[10, 10];
+            this.map = new gameObject[10,10];
 
             // Populate the map with empty objects:
             for (int i = 0; i < this.map.GetLength(0); i++)

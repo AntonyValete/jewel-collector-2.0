@@ -6,7 +6,7 @@ namespace JewelCollector
         {
 
             // criei um robo de teste
-            var testerbot = new Robot(1, 1, false, false, 10);
+            var testerbot = new Robot(1, 1, false, false, 25);
             ConsoleKeyInfo keyinfo; // definição da variavel da tecla pressionada
             bool gameRunning = true;
 
@@ -31,7 +31,6 @@ namespace JewelCollector
                 else if (testerbot.totalEnergy == 0)
                     gameRunning = false;
             } while (gameRunning == true);
-
         }
     }
 }
