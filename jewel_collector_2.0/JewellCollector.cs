@@ -30,7 +30,6 @@ namespace JewelCollector
                 }
             } while (gameRunning == true);
 
-
         }
     }
 }
