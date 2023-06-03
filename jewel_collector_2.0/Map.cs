@@ -6,9 +6,13 @@ namespace JewelCollector
         public gameObject[,] map;
 
         private Robot robot;
+
         public Map(Robot robot)
         {
             this.map = new gameObject[10,10];
+            
+            robot.gameEvent += SetRobotPosition;
+            robot.gameEvent += Print;
 
             // Populate the map with empty objects:
             for (int i = 0; i < this.map.GetLength(0); i++)
@@ -44,7 +48,7 @@ namespace JewelCollector
 
         public void SetRobotPosition() {
             (int x, int y) = robot.getCoordinate();
-            this.map[robot.coordCache.cy, robot.coordCache.cx] = new Empty(robot.coordCache.cx, robot.coordCache.cy,true,false);
+            this.map[robot.coordCache.cy, robot.coordCache.cx] = new Empty(robot.coordCache.cx, robot.coordCache.cy, true, false);
             this.map[y, x] = robot;
         }
 
@@ -61,6 +65,15 @@ namespace JewelCollector
                 }
                 Console.WriteLine();
             }
+        }
+
+        public void MovementEvent(ConsoleKey key, ref Map map, gameObject[,] mapRender) {
+            robot.Movement(key, ref map, mapRender);
+        }
+
+        public void MapRender(Map map) {
+            map.SetRobotPosition();
+            map.Print();
         }
     }
 }
