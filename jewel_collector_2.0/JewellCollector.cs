@@ -15,16 +15,17 @@ namespace JewelCollector
             var map = new Map(testerbot);
             do
             {
-                map.SetRobotPosition();
-                map.Print();
-
+                // map.SetRobotPosition();
+                // map.Print();
+                map.MapRender(map);    
+                Console.WriteLine(testerbot.getCoordinate());
                 Console.Write("Energia: ");
                 Console.WriteLine(testerbot.totalEnergy);
 
                 Console.Write("Insira um movimento: ");
                 keyinfo = Console.ReadKey(); // lê o evento do teclado
-                testerbot.Movement(keyinfo.Key, ref map); // printa a tecla pressionada
-                Console.WriteLine(testerbot.getCoordinate()); // printa as novas coordenadas
+                // testerbot.Movement(keyinfo.Key, ref map); // printa a tecla pressionada
+                map.MovementEvent(keyinfo.Key, ref map, map.map);
 
                 if (keyinfo.Key == ConsoleKey.X || keyinfo.Key == ConsoleKey.Q)
                     gameRunning = false; //eXit

@@ -15,38 +15,52 @@ namespace JewelCollector {
         }
         
         // TODO: Exception handler:
-        public bool checkIfEmpty(int x, int y) {
-            // Handling out of bounds check
-            if (x < 0 || y < 0) return false;
-            if (x > 9 || y > 9) return false;
-
+        public bool checkIfAllowed(int x, int y, gameObject[,] map) {
+            if (x < 0 || y < 0 || x > 9 || y > 9) return false;
+            if (map[x, y].getPassable() == false) return false;
             // TODO: Passable object checking
+
             // Pseudocode: If <object[coordTemp.x,coordTemp.y]> != passable return false;
             return true;
         }
 
-        public void Movement(ConsoleKey key, ref Map map) { // método de movimento vai mudar as coordenadas dependendo da tecla pressionada
+        public delegate void moveDelegateHandler();
+        public event moveDelegateHandler gameEvent;
+
+        public void Movement(ConsoleKey key, ref Map map, gameObject[,] mapRender) { // método de movimento vai mudar as coordenadas dependendo da tecla pressionada
             
-            (int x, int y) = this.getCoordinate();
-            (int dx, int dy) coordTemp = this.getCoordinate();
-            switch (key) {
-                case (ConsoleKey.A):
-                    coordTemp = (x-1, y);
-                    break;
-                case (ConsoleKey.D):
-                    coordTemp = (x+1, y);
-                    break;
-                case (ConsoleKey.S):
-                    coordTemp = (x, y+1);
-                    break;
-                case (ConsoleKey.W):
-                    coordTemp = (x, y-1);
-                    break;
-            }
-            if (checkIfEmpty(coordTemp.dx, coordTemp.dy) == true) {
-                coordCache = (x, y);
-                setCoordinate(coordTemp.dx, coordTemp.dy);
-                this.totalEnergy--;
+            if (gameEvent != null) {
+                bool allowed = false;
+                (int x, int y) = this.getCoordinate();
+            	(int dx, int dy) coordTemp = this.getCoordinate();
+                switch (key) {
+                    case (ConsoleKey.A):
+                        x -= 1;
+                        allowed = checkIfAllowed(x, y, mapRender);
+                        break;
+                    case (ConsoleKey.D):
+                        x += 1;
+                        allowed = checkIfAllowed(x, y, mapRender);
+                        break;
+                    case (ConsoleKey.S):
+                        y += 1;
+                        allowed = checkIfAllowed(x, y, mapRender);
+                        break;
+                    case (ConsoleKey.W):
+                        y -= 1;
+                        allowed = checkIfAllowed(x, y, mapRender);
+                        break;
+                }  
+
+                // check if next step is empty for movement
+                if (allowed) {
+                    this.setCoordinate(x, y);
+                    coordCache = (coordTemp.dx, coordTemp.dy);
+                    this.totalEnergy--;
+                    gameEvent();
+                } else {
+
+                }
             }
         }
         public override string getDisplayName()

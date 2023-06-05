@@ -3,9 +3,9 @@ Desenvolver o minigame **Jewel Collector 2.0**, implementado previamente na aula
 
 ### Requisitos na construção do código
 - [ ] Devem ser usados, tanto arrays como alguma instância de uma Collection (a seu critério)
-- [ ] Mecanismo de Eventos para captura dos eventos de teclado e visualização do mapa no console
+- [x] Mecanismo de Eventos para captura dos eventos de teclado e visualização do mapa no console
 - [ ] Geração de Documentação Automática: Todas as classes, os métodos públicos das classes utilizadas, bem como os fields públicos devem ser comentados e incluídos na documentação gerada.
-- [ ] Implemente o mapa como uma matriz de items (jewels, obstacles, demais elementos mostrados no mapa). Seu código deverá imprimir o mapa de forma simples, como no exemplo abaixo (não necessariamente dessa maneira):
+- [x] Implemente o mapa como uma matriz de items (jewels, obstacles, demais elementos mostrados no mapa). Seu código deverá imprimir o mapa de forma simples, como no exemplo abaixo (não necessariamente dessa maneira):
 
 ```void PrintMap() {
 
@@ -29,7 +29,7 @@ Desenvolver o minigame **Jewel Collector 2.0**, implementado previamente na aula
 - [x] perda de 1 ponto de energia com deslocamento
 - [x] Limite de movimentos dentro do mapa
 - [x] Símbolo "ME"
-- [x] Quando chegar a zero, o robô não poderá se mover mais; e o jogo termina]
+- [x] Quando chegar a zero, o robô não poderá se mover mais; e o jogo termina
 - [ ] Bag com quantidade de itens e pontuação
 
 *O robô interage com o ambiente podendo usar os itens no mapa quando ele estiver em posições adjacentes a estes itens. O efeito do uso depende das características do item. Alguns poderão ser coletados (collect), sendo assim removidos do mapa e guardados na sacola do robô. Outros poderão ser usados pelo robô para recarregar (recharge) sua energia. Para usar (coletar/recarregar) um item, use a tecla g.*

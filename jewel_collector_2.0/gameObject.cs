@@ -11,6 +11,10 @@ namespace JewelCollector
             this.collectable = collectable;
         }
 
+        public bool getPassable() {
+            return passable;
+        }
+
         public abstract string getDisplayName();
     }
 
