@@ -12,6 +12,12 @@ namespace JewelCollector
         }
 
         public abstract string getDisplayName();
+        public bool getPassable() {
+            return this.passable;
+        }
+        public bool getCollectable() {
+            return this.collectable;
+        }
     }
 
     public class Empty : gameObject

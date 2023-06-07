@@ -1,61 +1,41 @@
+using System.Collections.ObjectModel;
+
 namespace JewelCollector
 {
     //It would be great if we could implement the singleton design pattern, but don't bother with it. Map and Robot
     public class Map
     {
         public gameObject[,] map;
-
         private Robot robot;
-
-        public Map(Robot robot)
+        
+        public Map(Robot robot, Collection<gameObject> gameObjectCollection)
         {
             this.map = new gameObject[10, 10];
-
-            robot.gameEvent += SetRobotPosition;
             robot.gameEvent += Print;
-
-            // Populate the map with empty objects:
-            for (int i = 0; i < this.map.GetLength(0); i++)
-                for (int j = 0; j < this.map.GetLength(1); j++)
-                    this.map[i, j] = new Empty(i, j, true, false);
-
-            /* TODO: These are populating the map according to the instructions.
-             * we should make a way of creating multiple instances of maps for
-             * different stages.
-             */
-            this.map[1, 9] = new RedJewel(1, 9, false, true);
-            this.map[8, 8] = new RedJewel(8, 8, false, true);
-            this.map[9, 1] = new GreenJewel(9, 1, false, true);
-            this.map[7, 6] = new GreenJewel(7, 6, false, true);
-            this.map[3, 4] = new BlueJewel(3, 4, false, true);
-            this.map[2, 1] = new BlueJewel(2, 1, false, true);
-
-            this.map[5, 0] = new Water(5, 0, false);
-            this.map[5, 1] = new Water(5, 1, false);
-            this.map[5, 2] = new Water(5, 2, false);
-            this.map[5, 3] = new Water(5, 3, false);
-            this.map[5, 4] = new Water(5, 4, false);
-            this.map[5, 5] = new Water(5, 5, false);
-
-            this.map[5, 9] = new Tree(5, 9, false);
-            this.map[3, 9] = new Tree(3, 9, false);
-            this.map[8, 3] = new Tree(8, 3, false);
-            this.map[2, 5] = new Tree(2, 5, false);
-            this.map[1, 4] = new Tree(1, 4, false);
-
             this.robot = robot;
         }
 
-        public void SetRobotPosition()
-        {
-            (int x, int y) = robot.getCoordinate();
-            this.map[robot.coordCache.cy, robot.coordCache.cx] = new Empty(robot.coordCache.cx, robot.coordCache.cy, true, false);
-            this.map[y, x] = robot;
-        }
-
-        public void Print()
-        {
+        public void Print(Collection<gameObject> gameObjectCollection) // Agora a cada movimento o print renderiza e insere os objetos no mapa
+        {   
             Console.Clear();
+            for (int i = 0; i < this.map.GetLength(0); i++)
+                for (int j = 0; j < this.map.GetLength(1); j++)
+                    
+                    foreach (gameObject gObject in gameObjectCollection) { // Verifica se na collection existe um objeto nas coordenadas específicas e, caso sim, o insere no mapa
+                        
+                        if (gObject.getCoordinate() == (i, j)) {
+                            this.map[i, j] = gObject;
+                            break;
+                        }
+                        else {
+                            if (robot.getCoordinate() == (j, i)) { // Insere o robô
+                                this.map[i, j] = robot;
+                                break;
+                            };                                    // Insere o resto
+                            this.map[i, j] = new Empty(i, j, true, false);
+                        }
+                    }
+            // Aqui printa
             for (int i = 0; i < this.map.GetLength(0); i++)
             {
                 for (int j = 0; j < this.map.GetLength(1); j++)
@@ -68,15 +48,14 @@ namespace JewelCollector
             }
         }
 
-        public void MovementEvent(ConsoleKey key, ref Map map, gameObject[,] mapRender)
+        public void MovementEvent(ConsoleKey key, ref Map map, gameObject[,] mapRender, Collection<gameObject> gameObjectsCollection)
         {
-            robot.Movement(key, ref map, mapRender);
+            robot.Movement(key, ref map, mapRender, gameObjectsCollection);
         }
 
-        public void MapRender(Map map)
+        public void MapRender(Map map, Collection<gameObject> gameObjectCollection)
         {
-            map.SetRobotPosition();
-            map.Print();
+            map.Print(gameObjectCollection);
         }
     }
 }

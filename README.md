@@ -2,10 +2,10 @@
 Desenvolver o minigame **Jewel Collector 2.0**, implementado previamente na aula 2. O objetivo dessa nova versão é melhorar o código anterior através da implementação dos novos conceitos e recursos aprendidos até o momento. Cada classe deve estar em um arquivo separado, com o nome NomedaClasse.cs. Particularmente, os seguintes recursos DEVEM NECESSARIAMENTE ser utilizados:
 
 ### Requisitos na construção do código
-- [ ] Devem ser usados, tanto arrays como alguma instância de uma Collection (a seu critério)
-- [ ] Mecanismo de Eventos para captura dos eventos de teclado e visualização do mapa no console
+- [x] Devem ser usados, tanto arrays como alguma instância de uma Collection (a seu critério)
+- [x] Mecanismo de Eventos para captura dos eventos de teclado e visualização do mapa no console
 - [ ] Geração de Documentação Automática: Todas as classes, os métodos públicos das classes utilizadas, bem como os fields públicos devem ser comentados e incluídos na documentação gerada.
-- [ ] Implemente o mapa como uma matriz de items (jewels, obstacles, demais elementos mostrados no mapa). Seu código deverá imprimir o mapa de forma simples, como no exemplo abaixo (não necessariamente dessa maneira):
+- [x] Implemente o mapa como uma matriz de items (jewels, obstacles, demais elementos mostrados no mapa). Seu código deverá imprimir o mapa de forma simples, como no exemplo abaixo (não necessariamente dessa maneira):
 
 ```void PrintMap() {
 
@@ -30,23 +30,23 @@ Desenvolver o minigame **Jewel Collector 2.0**, implementado previamente na aula
 - [x] Limite de movimentos dentro do mapa
 - [x] Símbolo "ME"
 - [x] Quando chegar a zero, o robô não poderá se mover mais; e o jogo termina]
-- [ ] Bag com quantidade de itens e pontuação
+- [x] Bag com quantidade de itens e pontuação
 
 *O robô interage com o ambiente podendo usar os itens no mapa quando ele estiver em posições adjacentes a estes itens. O efeito do uso depende das características do item. Alguns poderão ser coletados (collect), sendo assim removidos do mapa e guardados na sacola do robô. Outros poderão ser usados pelo robô para recarregar (recharge) sua energia. Para usar (coletar/recarregar) um item, use a tecla g.*
 
 #### Classe Map
-- [ ] Para cada comando executado pelo usuário, imprima o estado atual do mapa, a energia do robô, bem como o estado da sacola do robô (evento).
+- [x] Para cada comando executado pelo usuário, imprima o estado atual do mapa, a energia do robô, bem como o estado da sacola do robô (pdoeria ser feito com evento).
 
 #### Vazio
 - [x] Símbolo "--"
 - [x] Fazer swap com o robô com o movimento
-- [ ] Aparecer quando uma joia é coletada
+- [x] Aparecer quando uma joia é coletada
 
 
 #### Classe Jewel
 - [ ] Todas as joias serão coletadas após o uso. Utilize o conceito de interface para realizar essas ações.
 - [x] Coletavel
-- [ ] Intranspassavel
+- [x] Intranspassavel
 
 ##### Blue
 - [x] Fornecer 5 pontos de energia pro robô
@@ -67,7 +67,7 @@ Desenvolver o minigame **Jewel Collector 2.0**, implementado previamente na aula
 
 ##### Water
 - [x] Símbolo "##"
-- [ ] Intranspassavel
+- [x] Intranspassavel
 
 ##### Tree
 - [ ] Recarregável, fornece 3 pontos de energia pro robô
@@ -75,8 +75,8 @@ Desenvolver o minigame **Jewel Collector 2.0**, implementado previamente na aula
 
 #### Exceções
 - [x] robô tenta se deslocar para uma posição fora dos limites do mapa;
-- [ ] robô tenta se deslocar para uma posição ocupada por outro item;
-- [ ] outras situações que achar pertinente o uso de exceções.
+- [x] robô tenta se deslocar para uma posição ocupada por outro item;
+- [x] outras situações que achar pertinente o uso de exceções.
 
 
 ### Requisitos Fase 2
