@@ -52,7 +52,7 @@ Desenvolver o minigame **Jewel Collector 2.0**, implementado previamente na aula
 - [x] Fornecer 5 pontos de energia pro robô
 - [x] 10 pontos
 - [X] Símbolo JB
-- [ ] recarregavel
+- [x] recarregavel
 
 ##### Red
 - [x] Valor de 100 pontos
@@ -70,7 +70,7 @@ Desenvolver o minigame **Jewel Collector 2.0**, implementado previamente na aula
 - [x] Intranspassavel
 
 ##### Tree
-- [ ] Recarregável, fornece 3 pontos de energia pro robô
+- [x] Recarregável, fornece 3 pontos de energia pro robô
 
 
 #### Exceções
@@ -80,15 +80,15 @@ Desenvolver o minigame **Jewel Collector 2.0**, implementado previamente na aula
 
 
 ### Requisitos Fase 2
-- [ ] Quando todas as joias forem coletadas, o jogo avança para a fase seguinte.
+- [x] Quando todas as joias forem coletadas, o jogo avança para a fase seguinte.
 - [ ] Posicionamento aleatorio de joias e obstáculos  
 
 #### Classe Mapa
-- [ ] A cada nova fase, o mapa aumenta suas dimensões em 1 unidade, até o limite máximo de (30, 30) unidades. 
+- [x] A cada nova fase, o mapa aumenta suas dimensões em 1 unidade, até o limite máximo de (30, 30) unidades. 
 - [ ] A quantidade de itens deverá aumentar proporcionalmente ao tamanho do mapa.
 
 #### Classe Radiactive
-- [ ] Criar a partir da fase 2
+- [ ] Criar a partir da fase 2 (tá criado, falta add)
 - [x] símbolo "!!"
 - [x] Retirará 10 pontos de energia, caso o robô passe em posições adjacentes.
 - [x] Elemento será transponível 

@@ -8,6 +8,7 @@ namespace JewelCollector
     public class Tree : Obstacle
     {
         private static string displayName = "$$";
+        public static readonly int energyPoints = 3;
 
         public Tree(int x, int y, bool collectable) : base(x, y, collectable) { }
 
@@ -19,8 +20,6 @@ namespace JewelCollector
     public class Water : Obstacle
     {
         private static string displayName = "##";
-        public static readonly int energyPoints = 3;
-
         public Water(int x, int y, bool collectable) : base(x, y, collectable) { }
 
         public override string getDisplayName()

@@ -2,6 +2,8 @@ namespace JewelCollector
 {
     public abstract class gameObject : Coordinate
     {
+        public readonly int energyPoints;
+
         private bool passable { get; set; }
         private bool collectable { get; set; }
 

@@ -7,14 +7,14 @@ using System.Collections.ObjectModel;
 namespace JewelCollector {
     public class Robot : gameObject {   
         public static readonly string displayName = "ME";
-        public uint totalEnergy;
+        public int totalEnergy;
         public List<Jewel> bag = new List<Jewel>();
         public (int cx, int cy) coordCache;
         private (int dx, int dy) coordTemp;
         public delegate void moveDelegateHandler(Collection<gameObject> gameObjectCollection);
         public event moveDelegateHandler gameEvent;
 
-        public Robot(int x, int y, bool passable, bool collectable, uint totalEnergy) : base(x, y, passable, collectable) {
+        public Robot(int x, int y, bool passable, bool collectable, int totalEnergy) : base(x, y, passable, collectable) {
             setCoordinate(x, y);
             this.totalEnergy = totalEnergy;
         }
@@ -48,11 +48,19 @@ namespace JewelCollector {
                     for (int i = 0; i < around.GetLength(0); i++) { // Verifica se algum dos objetos ao redor é coletavel e, casi sim, o adiciona na bag e o remove da collection de objetos
                         for (int j = 0; j < around.GetLength(1); j++) {
                             try {
+                                if (around[i, j] is Tree) {
+                                    Console.WriteLine("energia!");
+                                    this.totalEnergy += Tree.energyPoints;
+                                }
+
                                 if (around[i, j].getCollectable() == true) {
+                                    if (around[i, j] is BlueJewel) {
+                                        Console.WriteLine("energia!");
+                                        this.totalEnergy += BlueJewel.energyPoints;
+                                    }
                                     this.bag.Add((Jewel)around[i, j]);
                                     gameObjectsCollection.Remove(around[i, j]);
                                     gameEvent(gameObjectsCollection);
-
                                 }
 
                             } catch { }             

@@ -8,9 +8,9 @@ namespace JewelCollector
         public gameObject[,] map;
         private Robot robot;
         
-        public Map(Robot robot, Collection<gameObject> gameObjectCollection)
+        public Map(Robot robot, Collection<gameObject> gameObjectCollection, int mapDimension)
         {
-            this.map = new gameObject[10, 10];
+            this.map = new gameObject[mapDimension, mapDimension];
             robot.gameEvent += Print;
             this.robot = robot;
         }
