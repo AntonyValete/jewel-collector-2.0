@@ -1,3 +1,16 @@
+///
+/// @file JewellCollector.cs
+/// <summary>
+/// Entry point for the JewelCollector Game
+/// </summary>
+/// @author Antony Valete
+/// @author Lucas Mellone
+/// @author Andrés García
+/// @author Pedro Ferreira
+/// @date 11/06/2023
+/// $Id: JewellCollector.cs, v1.0 2023/06/11 $
+
+
 using System.Collections.ObjectModel;
 namespace JewelCollector
 {
@@ -92,7 +105,9 @@ namespace JewelCollector
             new Tree(3, 9, false),
             new Tree(8, 3, false),
             new Tree(2, 5, false),
-            new Tree(1, 4, false)
+            new Tree(1, 4, false),
+
+            new Radioactive(9, 9, false)
             };
 
             Map newMap = new Map(newBot, gameObjectCollection, mapDimension);
