@@ -44,7 +44,7 @@ namespace JewelCollector
                 {
                     try
                     {
-                        around[i, j] = map[y + (i - 1), x + (j - 1)];
+                        around[i, j] = map[x + (i - 1), y + (j - 1)];
                     }
                     catch
                     {
@@ -100,8 +100,8 @@ namespace JewelCollector
         /// </summary>
         public bool checkIfAllowed(int x, int y, gameObject[,] map)
         {
-            if (x < 0 || y < 0 || x > (map.GetLength(0) - 1) || y > (map.GetLength(1) - 1)) return false;
-            if (map[y, x].getPassable() == false) return false;
+            if (x < 0 || y < 0 || x > (map.GetLength(1) - 1) || y > (map.GetLength(0) - 1)) return false;
+            if (map[x, y].getPassable() == false) return false;
             return true;
         }
 
@@ -120,19 +120,19 @@ namespace JewelCollector
                 switch (key)
                 {
                     case (ConsoleKey.A):
-                        x -= 1;
+                        y -= 1;
                         allowed = checkIfAllowed(x, y, mapRender);
                         break;
                     case (ConsoleKey.D):
-                        x += 1;
-                        allowed = checkIfAllowed(x, y, mapRender);
-                        break;
-                    case (ConsoleKey.S):
                         y += 1;
                         allowed = checkIfAllowed(x, y, mapRender);
                         break;
+                    case (ConsoleKey.S):
+                        x += 1;
+                        allowed = checkIfAllowed(x, y, mapRender);
+                        break;
                     case (ConsoleKey.W):
-                        y -= 1;
+                        x -= 1;
                         allowed = checkIfAllowed(x, y, mapRender);
                         break;
                 }

@@ -30,7 +30,7 @@ namespace JewelCollector
                             this.map[i, j] = gObject;
                             break;
                         }
-                        else if(robot.getCoordinate() == (j, i)) {
+                        else if(robot.getCoordinate() == (i, j)) {
                             this.map[i, j] = robot;
                             break;
                         }
