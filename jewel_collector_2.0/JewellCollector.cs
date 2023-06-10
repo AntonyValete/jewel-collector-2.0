@@ -35,17 +35,17 @@ namespace JewelCollector
             int gamePhase = 1;
             int mapDimension = 10;
             var map = new Map(testerbot, gameObjectCollection, mapDimension);
-
-            // Prototype declaration of the map array
             
             do
             {
                 map.MapRender(map, gameObjectCollection);
+                
+                Console.ForegroundColor = ConsoleColor.Gray;
                 Console.Write("Energia: ");
                 Console.WriteLine(testerbot.totalEnergy);
                 Console.Write("Bag: ");
                 foreach (Jewel item in testerbot.bag) {
-                    Console.Write(item + " ");
+                    Console.Write(item.getDisplayName() + " ");
                 }
                 Console.Write($"Fase: {gamePhase}");
                 
@@ -58,7 +58,7 @@ namespace JewelCollector
 
                 if (!gameObjectCollection.OfType<Jewel>().Any()) {
                     gamePhase++;
-                    (testerbot, map, gameObjectCollection) = newfase(map);
+                    (testerbot, map, gameObjectCollection) = newphase(map);
                 }
                     
                 if (keyinfo.Key == ConsoleKey.X || keyinfo.Key == ConsoleKey.Q || testerbot.totalEnergy == 0)
@@ -66,7 +66,7 @@ namespace JewelCollector
             } while (gameRunning == true);
         }
 
-        static (Robot, Map, Collection<gameObject>) newfase(Map map) {
+        static (Robot, Map, Collection<gameObject>) newphase(Map map) {
             
             var newBot = new Robot(1, 1, false, false, 100);
             int mapDimension = map.map.GetLength(0) + 1;

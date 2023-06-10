@@ -9,6 +9,7 @@ namespace JewelCollector
     {
         private static string displayName = "$$";
         public static readonly int energyPoints = 3;
+        public bool isCollected = false;
 
         public Tree(int x, int y, bool collectable) : base(x, y, collectable) { }
 

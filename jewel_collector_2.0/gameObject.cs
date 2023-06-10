@@ -6,6 +6,7 @@ namespace JewelCollector
 
         private bool passable { get; set; }
         private bool collectable { get; set; }
+        private bool isCollected { get; set; }
 
         public gameObject(int x, int y, bool passable, bool collectable) : base(x, y)
         {
@@ -19,6 +20,12 @@ namespace JewelCollector
         }
         public bool getCollectable() {
             return this.collectable;
+        }
+        public bool getCollected() {
+            return this.isCollected;
+        }
+        public bool setCollected(bool Collected) {
+            return this.isCollected = Collected;
         }
     }
 

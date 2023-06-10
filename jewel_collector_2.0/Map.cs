@@ -18,30 +18,60 @@ namespace JewelCollector
         public void Print(Collection<gameObject> gameObjectCollection) // Agora a cada movimento o print renderiza e insere os objetos no mapa
         {   
             Console.Clear();
-            for (int i = 0; i < this.map.GetLength(0); i++)
-                for (int j = 0; j < this.map.GetLength(1); j++)
-                    
-                    foreach (gameObject gObject in gameObjectCollection) { // Verifica se na collection existe um objeto nas coordenadas específicas e, caso sim, o insere no mapa
-                        
+            // TODO: Aqui não seria melhor criar um outro método chamado PopulateMap(Collection<gameObject> gameObjectCollection);?
+            for (int i = 0; i < this.map.GetLength(0); i++) 
+            {
+                for (int j = 0; j < this.map.GetLength(1); j++) 
+                {
+                    foreach (gameObject gObject in gameObjectCollection) 
+                    { 
+                        // Verifica se na collection existe um objeto nas coordenadas específicas e, caso sim, o insere no mapa
                         if (gObject.getCoordinate() == (i, j)) {
                             this.map[i, j] = gObject;
                             break;
                         }
-                        else {
-                            if (robot.getCoordinate() == (j, i)) { // Insere o robô
-                                this.map[i, j] = robot;
-                                break;
-                            };                                    // Insere o resto
-                            this.map[i, j] = new Empty(i, j, true, false);
+                        else if(robot.getCoordinate() == (j, i)) {
+                            this.map[i, j] = robot;
+                            break;
                         }
+                        this.map[i, j] = new Empty(i, j, true, false);
                     }
+                }
+            }
+
             // Aqui printa
             for (int i = 0; i < this.map.GetLength(0); i++)
             {
                 for (int j = 0; j < this.map.GetLength(1); j++)
                 {
-                    if (this.map[i, j] == robot) Console.ForegroundColor = ConsoleColor.Blue;
-                    else if (this.map[i, j] != robot) Console.ForegroundColor = ConsoleColor.Gray;
+                    switch(map[i, j].getDisplayName())
+                    {
+                        case "ME":
+                            Console.ForegroundColor = ConsoleColor.DarkYellow;
+                            break;
+                        case "BJ":
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            break;
+                        case "RJ":
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            break;
+                        case "GJ":
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            break;
+                        case "$$":
+                            Console.ForegroundColor = ConsoleColor.DarkGreen;
+                            break;
+                        case "##":
+                            Console.ForegroundColor = ConsoleColor.DarkBlue;
+                            break;
+                        case "!!":
+                            Console.ForegroundColor = ConsoleColor.Magenta;
+                            break;
+                        case "--":
+                            Console.ForegroundColor = ConsoleColor.Gray;
+                            break;
+                    }
+                    // else if (this.map[i, j] != robot) Console.ForegroundColor = ConsoleColor.Gray;
                     Console.Write(this.map[i, j].getDisplayName() + " ");
                 }
                 Console.WriteLine();
