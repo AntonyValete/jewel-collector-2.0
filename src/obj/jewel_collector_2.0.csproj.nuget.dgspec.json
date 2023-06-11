@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fraya\\extracamp\\cs_\\jewel-collector-2.0\\jewel_collector_2.0\\jewel_collector_2.0.csproj": {}
+    "C:\\Users\\fraya\\extracamp\\cs_\\jewel-collector-2.0\\src\\jewel_collector_2.0.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fraya\\extracamp\\cs_\\jewel-collector-2.0\\jewel_collector_2.0\\jewel_collector_2.0.csproj": {
+    "C:\\Users\\fraya\\extracamp\\cs_\\jewel-collector-2.0\\src\\jewel_collector_2.0.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fraya\\extracamp\\cs_\\jewel-collector-2.0\\jewel_collector_2.0\\jewel_collector_2.0.csproj",
+        "projectUniqueName": "C:\\Users\\fraya\\extracamp\\cs_\\jewel-collector-2.0\\src\\jewel_collector_2.0.csproj",
         "projectName": "jewel_collector_2.0",
-        "projectPath": "C:\\Users\\fraya\\extracamp\\cs_\\jewel-collector-2.0\\jewel_collector_2.0\\jewel_collector_2.0.csproj",
+        "projectPath": "C:\\Users\\fraya\\extracamp\\cs_\\jewel-collector-2.0\\src\\jewel_collector_2.0.csproj",
         "packagesPath": "C:\\Users\\fraya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fraya\\extracamp\\cs_\\jewel-collector-2.0\\jewel_collector_2.0\\obj\\",
+        "outputPath": "C:\\Users\\fraya\\extracamp\\cs_\\jewel-collector-2.0\\src\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\fraya\\AppData\\Roaming\\NuGet\\NuGet.Config",
