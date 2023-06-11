@@ -15,6 +15,8 @@ namespace JewelCollector
         public static readonly string displayName = "ME";
         public int totalEnergy;
         public List<Jewel> bag = new List<Jewel>();
+        public (int cx, int cy) coordCache;
+        private (int dx, int dy) coordTemp;
         public delegate void moveDelegateHandler(Collection<gameObject> gameObjectCollection);
         public event moveDelegateHandler gameEvent;
 
@@ -37,7 +39,7 @@ namespace JewelCollector
         /// Object: checkAround method creates a 3x3 mini map to check the immediate surroundings of the robot.
         /// </summary>
         /// <param name="map">map gameObject array</param>
-        /// <returns>The 3x3 surroundings of the robot</returns>
+        /// <returns>gameObject[,]: The 3x3 surroundings of the robot</returns>
         public gameObject[,] checkAround(gameObject[,] map)
         {
             (int x, int y) = this.getCoordinate();
@@ -105,23 +107,29 @@ namespace JewelCollector
         /// <param name="x">Coordinate X</param>
         /// <param name="y">Coordinate Y</param>
         /// <param name="map">map gameObject array</param>
+        /// <returns>Bool: true if the robot is allowed to traverse to the next cell</returns>
         public bool checkIfAllowed(int x, int y, gameObject[,] map)
         {
             if (x < 0 || y < 0 || x > (map.GetLength(1) - 1) || y > (map.GetLength(0) - 1)) return false;
-            return map[x, y].getPassable();
+            if (map[x, y].getPassable() == false) return false;
+            return true;
         }
 
         /// <summary>
         /// Method: the Movement method will use the W,A,S,D keys to move the robot through the map, 
         /// calling the checkIfAllowed method to see if the robot is allowed to traverse to the next cell
         /// </summary>
-        public void Movement(ConsoleKey key, gameObject[,] mapRender, Collection<gameObject> gameObjectsCollection)
-        { // método de movimento vai mudar as coordenadas dependendo da tecla pressionada
-
+        /// <param name="key">The key pressed.</param>
+        /// <param name="map">map gameObject array.</param>
+        /// <param name="mapRender">The rendered map gameObject array.</param>
+        /// <param name="gameObjectsCollection">The collection for the game objects to be inserted on the map.</param>
+        public void Movement(ConsoleKey key, ref Map map, gameObject[,] mapRender, Collection<gameObject> gameObjectsCollection)
+        {
             if (gameEvent != null)
             {
                 bool allowed = false;
                 (int x, int y) = this.getCoordinate();
+                (int dx, int dy) coordTemp = this.getCoordinate();
                 switch (key)
                 {
                     case (ConsoleKey.A):
@@ -144,25 +152,8 @@ namespace JewelCollector
                 // check if next step is empty for movement
                 if (allowed)
                 {
-                    gameObject[,] around = checkAround(mapRender);
-
-                    foreach (gameObject gObject in around)
-                    {
-                        if (gObject is Radioactive)
-                        {
-                            if (gObject.getCoordinate() == (x, y))
-                            {
-                                this.totalEnergy += (Radioactive.energyPoints * 3);
-                                gameObjectsCollection.Remove(gObject);
-                            }
-                            else
-                            {
-                                this.totalEnergy += Radioactive.energyPoints;
-                            }
-                        }
-                    }
-
                     this.setCoordinate(x, y);
+                    // coordCache = (coordTemp.dx, coordTemp.dy);
                     this.totalEnergy--;
                     gameEvent(gameObjectsCollection);
                 }
@@ -172,7 +163,7 @@ namespace JewelCollector
         /// <summary>
         /// Method: getDisplayName will return the display name for the object. This method is a helper to print the name of each gameObject in the map.
         /// </summary>
-        /// <returns>The object property display name.</returns>
+        /// <returns>String: Object display name.</returns>
         public override string getDisplayName()
         {
             return displayName;

@@ -2,12 +2,17 @@ using System.Collections.ObjectModel;
 
 namespace JewelCollector
 {
-    //It would be great if we could implement the singleton design pattern, but don't bother with it. Map and Robot
+    /// <summary>
+    /// Class: Map class starter.
+    /// </summary>
     public class Map
     {
         public gameObject[,] map;
         private Robot robot;
-
+        
+        /// <summary>
+        /// Constructor: Map constructor.
+        /// </summary>
         public Map(Robot robot, Collection<gameObject> gameObjectCollection, int mapDimension)
         {
             this.map = new gameObject[mapDimension, mapDimension];
@@ -16,27 +21,25 @@ namespace JewelCollector
         }
 
         public void Print(Collection<gameObject> gameObjectCollection) // Agora a cada movimento o print renderiza e insere os objetos no mapa
-        {
+        {   
             Console.Clear();
             // TODO: Aqui não seria melhor criar um outro método chamado PopulateMap(Collection<gameObject> gameObjectCollection);?
-            for (int i = 0; i < this.map.GetLength(0); i++)
+            for (int i = 0; i < this.map.GetLength(0); i++) 
             {
-                for (int j = 0; j < this.map.GetLength(1); j++)
+                for (int j = 0; j < this.map.GetLength(1); j++) 
                 {
-                    foreach (gameObject gObject in gameObjectCollection)
-                    {
+                    foreach (gameObject gObject in gameObjectCollection) 
+                    { 
                         // Verifica se na collection existe um objeto nas coordenadas específicas e, caso sim, o insere no mapa
-                        if (gObject.getCoordinate() == (i, j))
-                        {
+                        if (gObject.getCoordinate() == (i, j)) {
                             this.map[i, j] = gObject;
                             break;
                         }
-                        else if (robot.getCoordinate() == (i, j))
-                        {
+                        else if(robot.getCoordinate() == (i, j)) {
                             this.map[i, j] = robot;
                             break;
                         }
-                        this.map[i, j] = new Empty(i, j);
+                        this.map[i, j] = new Empty(i, j, true, false);
                     }
                 }
             }
@@ -46,7 +49,7 @@ namespace JewelCollector
             {
                 for (int j = 0; j < this.map.GetLength(1); j++)
                 {
-                    switch (map[i, j].getDisplayName())
+                    switch(map[i, j].getDisplayName())
                     {
                         case "ME":
                             Console.ForegroundColor = ConsoleColor.DarkYellow;
@@ -80,9 +83,9 @@ namespace JewelCollector
             }
         }
 
-        public void MovementEvent(ConsoleKey key, gameObject[,] mapRender, Collection<gameObject> gameObjectsCollection)
+        public void MovementEvent(ConsoleKey key, ref Map map, gameObject[,] mapRender, Collection<gameObject> gameObjectsCollection)
         {
-            robot.Movement(key, mapRender, gameObjectsCollection);
+            robot.Movement(key, ref map, mapRender, gameObjectsCollection);
         }
 
         public void MapRender(Map map, Collection<gameObject> gameObjectCollection)

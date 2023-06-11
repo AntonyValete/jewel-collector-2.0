@@ -51,7 +51,7 @@ bool \mbox{\hyperlink{class_jewel_collector_1_1game_object_a006e45beb96f1d7c3d29
 \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_ae74f5eacbecb291fdc7692e25c6905d4}{get\+Coordinate}} ()
 \item 
 void \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a78b30912a83b6b5356d7ec1e8f59e117}{set\+Coordinate}} (\mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}, \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Method\+: Set the coordinates of given object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -72,7 +72,7 @@ readonly \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Method\+: This will return the coordinates of given object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -124,6 +124,19 @@ Class\+: Robot class starter.
 Object Constructor\+: Robot map constructor to create a new robot and position it into the map. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em x} & Coordinate X\\
+\hline
+{\em y} & Coordinate Y\\
+\hline
+{\em passable} & Due to game\+Object inheritance, determines if the robot is passable\\
+\hline
+{\em collectable} & Due to game\+Object inheritance, determines if the robot is collectable\\
+\hline
+{\em total\+Energy} & Overwrites the game\+Object class to determine the Robot Total Energy\\
+\hline
+\end{DoxyParams}
+
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{class_jewel_collector_1_1_robot_aadc4914f64754e61f27acab4e798f65e}\label{class_jewel_collector_1_1_robot_aadc4914f64754e61f27acab4e798f65e} 
@@ -136,6 +149,14 @@ Object Constructor\+: Robot map constructor to create a new robot and position i
 
 Object\+: check\+Around method creates a 3x3 mini map to check the immediate surroundings of the robot. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em map} & map game\+Object array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+game\+Object\mbox{[},\mbox{]}\+: The 3x3 surroundings of the robot
+\end{DoxyReturn}
 \Hypertarget{class_jewel_collector_1_1_robot_a233a66685b56d44bcf18637fb54d544d}\label{class_jewel_collector_1_1_robot_a233a66685b56d44bcf18637fb54d544d} 
 \index{Robot@{Robot}!checkIfAllowed@{checkIfAllowed}}
 \index{checkIfAllowed@{checkIfAllowed}!Robot@{Robot}}
@@ -146,6 +167,18 @@ Object\+: check\+Around method creates a 3x3 mini map to check the immediate sur
 
 Method\+: check\+If\+Allowed is the exception handler Method for the robot. This will return true if the robot is allowed to traverse to the next cell. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Coordinate X\\
+\hline
+{\em y} & Coordinate Y\\
+\hline
+{\em map} & map game\+Object array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Bool\+: true if the robot is allowed to traverse to the next cell
+\end{DoxyReturn}
 \Hypertarget{class_jewel_collector_1_1_robot_a8d8850cae273131f9dd033a8fe7ec3c1}\label{class_jewel_collector_1_1_robot_a8d8850cae273131f9dd033a8fe7ec3c1} 
 \index{Robot@{Robot}!collectJewel@{collectJewel}}
 \index{collectJewel@{collectJewel}!Robot@{Robot}}
@@ -156,6 +189,11 @@ Method\+: check\+If\+Allowed is the exception handler Method for the robot. This
 
 Method\+: The collect\+Jewel method is responsable for collecting the Jewel or Energy from Obstacles. It\textquotesingle{}s important to notice that the Methods get\+Collected and set\+Collected will avoid the exploid of collecting energy infinite times from the Trees. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em map} & map game\+Object array\\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_jewel_collector_1_1_robot_a5ee08c326c597e046917d3c9980ac576}\label{class_jewel_collector_1_1_robot_a5ee08c326c597e046917d3c9980ac576} 
 \index{Robot@{Robot}!getDisplayName@{getDisplayName}}
 \index{getDisplayName@{getDisplayName}!Robot@{Robot}}
@@ -166,6 +204,9 @@ Method\+: The collect\+Jewel method is responsable for collecting the Jewel or E
 
 Method\+: get\+Display\+Name will return the display name for the object. This method is a helper to print the name of each game\+Object in the map. 
 
+\begin{DoxyReturn}{Returns}
+String\+: Object display name.
+\end{DoxyReturn}
 
 
 Implements \mbox{\hyperlink{class_jewel_collector_1_1game_object_a29f1cea3f044aac007f6c01613ec0a53}{game\+Object}}.
@@ -186,6 +227,17 @@ Implements \mbox{\hyperlink{class_jewel_collector_1_1game_object_a29f1cea3f044aa
 
 Method\+: the Movement method will use the W,A,S,D keys to move the robot through the map, calling the check\+If\+Allowed method to see if the robot is allowed to traverse to the next cell. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key pressed.\\
+\hline
+{\em map} & map game\+Object array.\\
+\hline
+{\em map\+Render} & The rendered map game\+Object array.\\
+\hline
+{\em game\+Objects\+Collection} & The collection for the game objects to be inserted on the map.\\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Data Documentation}
@@ -244,4 +296,4 @@ Method\+: the Movement method will use the W,A,S,D keys to move the robot throug
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-jewel\+\_\+collector\+\_\+2.\+0/\mbox{\hyperlink{_robot_8cs}{Robot.\+cs}}\end{DoxyCompactItemize}
+src/\mbox{\hyperlink{_robot_8cs}{Robot.\+cs}}\end{DoxyCompactItemize}

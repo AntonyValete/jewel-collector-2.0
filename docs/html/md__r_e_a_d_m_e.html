@@ -23,6 +23,7 @@
   <td id="projectalign">
    <div id="projectname">JewelCollector<span id="projectnumber">&#160;1.0</span>
    </div>
+   <div id="projectbrief">JewelCollector Console Game. Built with C# + .NET 7.0</div>
   </td>
  </tr>
  </tbody>
@@ -81,13 +82,13 @@ Requisitos na construção do código</h2>
 <li>[ ] Geração de Documentação Automática: Todas as classes, os métodos públicos das classes utilizadas, bem como os fields públicos devem ser comentados e incluídos na documentação gerada.</li>
 <li>[x] Implemente o mapa como uma matriz de items (jewels, obstacles, demais elementos mostrados no mapa). Seu código deverá imprimir o mapa de forma simples, como no exemplo abaixo (não necessariamente dessa maneira):</li>
 </ul>
-<div class="fragment"><div class="line"> PrintMap() {</div>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> PrintMap() {</div>
 <div class="line"> </div>
-<div class="line">  for (int i = 0; i &lt; map.GetLength(0); i++) {</div>
-<div class="line">    for (int j = 0; j &lt; map.GetLength(1); j++) {</div>
+<div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; map.GetLength(0); i++) {</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; map.GetLength(1); j++) {</div>
 <div class="line">      Console.Write(map[i, j]);</div>
 <div class="line">    }</div>
-<div class="line">    Console.Write(&quot;\n&quot;);</div>
+<div class="line">    Console.Write(<span class="stringliteral">&quot;\n&quot;</span>);</div>
 <div class="line">  }</div>
 <div class="line"> </div>
 <div class="line">}</div>

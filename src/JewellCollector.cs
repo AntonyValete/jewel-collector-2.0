@@ -48,48 +48,45 @@ namespace JewelCollector
             int gamePhase = 1;
             int mapDimension = 10;
             var map = new Map(testerbot, gameObjectCollection, mapDimension);
-
+            
             do
             {
                 map.MapRender(map, gameObjectCollection);
-
+                
                 Console.ForegroundColor = ConsoleColor.Gray;
                 Console.Write("Energia: ");
                 Console.WriteLine(testerbot.totalEnergy);
                 Console.Write("Bag: ");
-                foreach (Jewel item in testerbot.bag)
-                {
+                foreach (Jewel item in testerbot.bag) {
                     Console.Write(item.getDisplayName() + " ");
                 }
                 Console.Write($"Fase: {gamePhase}");
-
+                
                 Console.WriteLine("\n" + testerbot.getCoordinate()); // printa as novas coordenadas
                 Console.Write("Insira um movimento: ");
                 keyinfo = Console.ReadKey(); // lê o evento do teclado
                 Console.WriteLine();
                 testerbot.collectJewel(keyinfo.Key, map.map, gameObjectCollection);
-                map.MovementEvent(keyinfo.Key, map.map, gameObjectCollection); // printa a tecla pressionada
+                map.MovementEvent(keyinfo.Key, ref map, map.map, gameObjectCollection); // printa a tecla pressionada
 
-                if (!gameObjectCollection.OfType<Jewel>().Any())
-                {
+                if (!gameObjectCollection.OfType<Jewel>().Any()) {
                     gamePhase++;
                     (testerbot, map, gameObjectCollection) = newphase(map);
                 }
-
-                if (keyinfo.Key == ConsoleKey.X || keyinfo.Key == ConsoleKey.Q || testerbot.totalEnergy <= 0)
+                    
+                if (keyinfo.Key == ConsoleKey.X || keyinfo.Key == ConsoleKey.Q || testerbot.totalEnergy == 0)
                     gameRunning = false; //eXit
             } while (gameRunning == true);
         }
 
-        static (Robot, Map, Collection<gameObject>) newphase(Map map)
-        {
-
+        static (Robot, Map, Collection<gameObject>) newphase(Map map) {
+            
             var newBot = new Robot(1, 1, false, false, 100);
             int mapDimension = map.map.GetLength(0) + 1;
 
             Random rand = new Random(); // pensei em usar um random para colocar os novos objetos de maneira aleatória
             Collection<gameObject> gameObjectCollection = new Collection<gameObject>() {
-
+            
             new RedJewel(1, 9, false, true),
             new RedJewel(8, 8, false, true),
             new GreenJewel(9, 1, false, true),

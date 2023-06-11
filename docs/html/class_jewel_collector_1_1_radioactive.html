@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.7-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
 <head>
@@ -9,10 +10,21 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="./doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -23,6 +35,7 @@
   <td id="projectalign">
    <div id="projectname">JewelCollector<span id="projectnumber">&#160;1.0</span>
    </div>
+   <div id="projectbrief">JewelCollector Console Game. Built with C# + .NET 7.0</div>
   </td>
  </tr>
  </tbody>
@@ -46,6 +59,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_jewel_collector_1_1_radioactive.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +97,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespace_jewel_collector.html">JewelCollector</a></li><li class="navelem"><a class="el" href="class_jewel_collector_1_1_radioactive.html">Radioactive</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -81,26 +106,32 @@ $(function() {
   <div class="headertitle"><div class="title">Radioactive</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class: Radioactive class starter. Inherits from Obstacle class.  
+ <a href="class_jewel_collector_1_1_radioactive.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for Radioactive:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_jewel_collector_1_1_radioactive.png" usemap="#Radioactive_map" alt=""/>
   <map id="Radioactive_map" name="Radioactive_map">
-<area href="class_jewel_collector_1_1_obstacle.html" alt="Obstacle" shape="rect" coords="0,112,79,136"/>
-<area href="class_jewel_collector_1_1game_object.html" alt="gameObject" shape="rect" coords="0,56,79,80"/>
-<area href="class_jewel_collector_1_1_coordinate.html" alt="Coordinate" shape="rect" coords="0,0,79,24"/>
+<area href="class_jewel_collector_1_1_obstacle.html" title="Class: Obstacle class starter. Inherits from gameObject class." alt="Obstacle" shape="rect" coords="0,112,79,136"/>
+<area href="class_jewel_collector_1_1game_object.html" title="Class: gameObject class starter. Inherits from Coordinate." alt="gameObject" shape="rect" coords="0,56,79,80"/>
+<area href="class_jewel_collector_1_1_coordinate.html" title="Class: Coordinate class starter." alt="Coordinate" shape="rect" coords="0,0,79,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:add4be91c12e24b3c9926ced45893a23f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1_radioactive.html#add4be91c12e24b3c9926ced45893a23f">Radioactive</a> (<a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="class_jewel_collector_1_1_coordinate.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, <a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="class_jewel_collector_1_1_coordinate.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, bool <a class="el" href="class_jewel_collector_1_1game_object.html#a4344f0c7b243fef4096651525cd9f8c7">collectable</a>)</td></tr>
+<tr class="memdesc:add4be91c12e24b3c9926ced45893a23f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor: Radioactive constructor.  <br /></td></tr>
 <tr class="separator:add4be91c12e24b3c9926ced45893a23f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ee08c326c597e046917d3c9980ac576"><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1_radioactive.html#a5ee08c326c597e046917d3c9980ac576">getDisplayName</a> ()</td></tr>
+<tr class="memdesc:a5ee08c326c597e046917d3c9980ac576"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method: getDisplayName will return the display name for the object. This method is a helper to print the name of each gameObject in the map.  <br /></td></tr>
 <tr class="separator:a5ee08c326c597e046917d3c9980ac576"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_jewel_collector_1_1_obstacle"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_jewel_collector_1_1_obstacle')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_jewel_collector_1_1_obstacle.html">Obstacle</a></td></tr>
 <tr class="memitem:a95be3b657d63cc36bcef9c40786fad2a inherit pub_methods_class_jewel_collector_1_1_obstacle"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1_obstacle.html#a95be3b657d63cc36bcef9c40786fad2a">Obstacle</a> (<a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="class_jewel_collector_1_1_coordinate.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, <a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="class_jewel_collector_1_1_coordinate.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, bool <a class="el" href="class_jewel_collector_1_1game_object.html#a4344f0c7b243fef4096651525cd9f8c7">collectable</a>)</td></tr>
+<tr class="memdesc:a95be3b657d63cc36bcef9c40786fad2a inherit pub_methods_class_jewel_collector_1_1_obstacle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor: Obstacle constructor.  <br /></td></tr>
 <tr class="separator:a95be3b657d63cc36bcef9c40786fad2a inherit pub_methods_class_jewel_collector_1_1_obstacle"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_jewel_collector_1_1game_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_jewel_collector_1_1game_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_jewel_collector_1_1game_object.html">gameObject</a></td></tr>
 <tr class="memitem:afcfaa39f2ad89f79f1a102dced8db7e6 inherit pub_methods_class_jewel_collector_1_1game_object"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1game_object.html#afcfaa39f2ad89f79f1a102dced8db7e6">gameObject</a> (<a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="class_jewel_collector_1_1_coordinate.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, <a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="class_jewel_collector_1_1_coordinate.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, bool <a class="el" href="class_jewel_collector_1_1game_object.html#a8796f00bd2cdaa2055ab82bbccbd67b6">passable</a>, bool <a class="el" href="class_jewel_collector_1_1game_object.html#a4344f0c7b243fef4096651525cd9f8c7">collectable</a>)</td></tr>
@@ -121,6 +152,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae74f5eacbecb291fdc7692e25c6905d4 inherit pub_methods_class_jewel_collector_1_1_coordinate"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1_coordinate.html#ae74f5eacbecb291fdc7692e25c6905d4">getCoordinate</a> ()</td></tr>
 <tr class="separator:ae74f5eacbecb291fdc7692e25c6905d4 inherit pub_methods_class_jewel_collector_1_1_coordinate"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78b30912a83b6b5356d7ec1e8f59e117 inherit pub_methods_class_jewel_collector_1_1_coordinate"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1_coordinate.html#a78b30912a83b6b5356d7ec1e8f59e117">setCoordinate</a> (<a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="class_jewel_collector_1_1_coordinate.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, <a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="class_jewel_collector_1_1_coordinate.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>)</td></tr>
+<tr class="memdesc:a78b30912a83b6b5356d7ec1e8f59e117 inherit pub_methods_class_jewel_collector_1_1_coordinate"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method: Set the coordinates of given object.  <br /></td></tr>
 <tr class="separator:a78b30912a83b6b5356d7ec1e8f59e117 inherit pub_methods_class_jewel_collector_1_1_coordinate"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
@@ -140,6 +172,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a7d6dc9456f21b10b99412913c02f9e49 inherit pub_attribs_class_jewel_collector_1_1game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_jewel_collector_1_1_coordinate"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_jewel_collector_1_1_coordinate')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_jewel_collector_1_1_coordinate.html">Coordinate</a></td></tr>
 <tr class="memitem:a61569f2965b7a369eb10b6d75d410d11 inherit pub_attribs_class_jewel_collector_1_1_coordinate"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a></td></tr>
+<tr class="memdesc:a61569f2965b7a369eb10b6d75d410d11 inherit pub_attribs_class_jewel_collector_1_1_coordinate"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method: This will return the coordinates of given object.  <br /></td></tr>
 <tr class="separator:a61569f2965b7a369eb10b6d75d410d11 inherit pub_attribs_class_jewel_collector_1_1_coordinate"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_class_jewel_collector_1_1game_object"><td colspan="2" onclick="javascript:toggleInherit('properties_class_jewel_collector_1_1game_object')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="class_jewel_collector_1_1game_object.html">gameObject</a></td></tr>
 <tr class="memitem:a4344f0c7b243fef4096651525cd9f8c7 inherit properties_class_jewel_collector_1_1game_object"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1game_object.html#a4344f0c7b243fef4096651525cd9f8c7">collectable</a><code> [get, set]</code></td></tr>
@@ -154,7 +187,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a0a2f84ed7838f07779ae24c5a9086d33 inherit properties_class_jewel_collector_1_1_coordinate"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1_coordinate.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a><code> [get, set]</code></td></tr>
 <tr class="separator:a0a2f84ed7838f07779ae24c5a9086d33 inherit properties_class_jewel_collector_1_1_coordinate"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class: Radioactive class starter. Inherits from Obstacle class. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="add4be91c12e24b3c9926ced45893a23f" name="add4be91c12e24b3c9926ced45893a23f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#add4be91c12e24b3c9926ced45893a23f">&#9670;&#160;</a></span>Radioactive()</h2>
 
@@ -187,6 +222,8 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Constructor: Radioactive constructor. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -212,6 +249,9 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Method: getDisplayName will return the display name for the object. This method is a helper to print the name of each gameObject in the map. </p>
+<dl class="section return"><dt>Returns</dt><dd>String: Object display name.</dd></dl>
 
 <p>Implements <a class="el" href="class_jewel_collector_1_1game_object.html#a29f1cea3f044aac007f6c01613ec0a53">gameObject</a>.</p>
 
@@ -263,12 +303,16 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>jewel_collector_2.0/<a class="el" href="_obstacle_8cs.html">Obstacle.cs</a></li>
+<li>src/<a class="el" href="_obstacle_8cs.html">Obstacle.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_jewel_collector.html">JewelCollector</a></li><li class="navelem"><a class="el" href="class_jewel_collector_1_1_radioactive.html">Radioactive</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+  </ul>
+</div>
 </body>
 </html>

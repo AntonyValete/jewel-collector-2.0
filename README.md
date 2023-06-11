@@ -1,13 +1,37 @@
-## Projeto Final para a Disciplina de Programação em C# do curso "Tecnologias Microsoft"
-Desenvolver o minigame **Jewel Collector 2.0**, implementado previamente na aula 2. O objetivo dessa nova versão é melhorar o código anterior através da implementação dos novos conceitos e recursos aprendidos até o momento. Cada classe deve estar em um arquivo separado, com o nome NomedaClasse.cs. Particularmente, os seguintes recursos DEVEM NECESSARIAMENTE ser utilizados:
+## Jewel Collector - C# + .NET 7.0 Minigame
+<img src="https://github.com/AntonyValete/jewel-collector-2.0/blob/master/assets/jc-screen.png?raw=true" 
+      alt="jewel collector screen" 
+      align=center 
+      style="display: block;
+            margin-left: auto;
+            margin-right: auto;"
+/>
 
-### Requisitos na construção do código
+**Jewel Collector** é um minigame desenvolvido durante a disciplina de **programação em C# + .NET do curso Tecnologias Microsoft - Extecamp (Universidade Estadual de Campinas)**. O objetivo do jogo é coletar jóias para sobreviver em um campo de obstáculos, utilizando o menor número de movimentos possível para conseguir passar para a próxima fase. Para isso, o **Robô (ME)** coleta as jóias ou recursos e  coloca em sua bolsa para ganhar **Energia**. 
+
+A cada fase o mapa do jogo aumenta, e o desafio fica mais difícil, já que cada fase é gerada aleatoriamente e incrementalmente. Os recursos, obstáculos e jóas disponíveis são:
+
+- **BJ:** Blue Jewel - Score: 10 pontos. Restaura 3 pontos de energia;
+- **RJ:** Red Jewel - Score: 50 pontos;
+- **GJ:** Green Jewel - Score: 100 pontos;
+- ##: Obstáculo: Água;
+- **$$:** Obstáculo: Árvore. Restaura 3 pontos de energia;
+- **!!:** Obstáculo: Radioativo. Elimina 10 pontos de energia;
+
+### Detalhes de implementação:
+Os seguintes requisitos foram necessários para a construção do jogo. A estrutura geral utilizada para sua construção toma como base os detalhes de implementação a seguir. Algumas escolhas também foram tomadas para a otimização do código, bem como funcionalidades que a equipe achou interessante.
+
+### Documentação
+A [documentação](https://antonyvalete.github.io/jewel-collector-2.0/html/index.html) do projeto foi gerada utilizando [Doxygen](https://www.doxygen.nl/index.html) com o tema [Doxygen-Awesome](https://github.com/jothepro/doxygen-awesome-css).
+
+#### Requisitos na construção do código
 - [x] Devem ser usados, tanto arrays como alguma instância de uma Collection (a seu critério)
 - [x] Mecanismo de Eventos para captura dos eventos de teclado e visualização do mapa no console
-- [ ] Geração de Documentação Automática: Todas as classes, os métodos públicos das classes utilizadas, bem como os fields públicos devem ser comentados e incluídos na documentação gerada.
+- [x] Geração de Documentação Automática: Todas as classes, os métodos públicos das classes utilizadas, bem como os fields públicos devem ser comentados e incluídos na documentação gerada.
 - [x] Implemente o mapa como uma matriz de items (jewels, obstacles, demais elementos mostrados no mapa). Seu código deverá imprimir o mapa de forma simples, como no exemplo abaixo (não necessariamente dessa maneira):
 
-```void PrintMap() {
+```cs
+void PrintMap() {
 
   for (int i = 0; i < map.GetLength(0); i++) {
     for (int j = 0; j < map.GetLength(1); j++) {
@@ -21,7 +45,7 @@ Desenvolver o minigame **Jewel Collector 2.0**, implementado previamente na aula
 
 *Note que o uso de polimorfismo se fará necessário, pois a variável map precisará armazenar os diversos tipos de objetos. Dica: Para escrever o objeto na tela, sobrescreva a método ToString em cada classe.*
 
-### Checklist:
+## Checklist:
 
 #### Classe Robot:
 - [x] Inicia 5 Pontos de energia
@@ -44,7 +68,7 @@ Desenvolver o minigame **Jewel Collector 2.0**, implementado previamente na aula
 
 
 #### Classe Jewel
-- [ ] Todas as joias serão coletadas após o uso. Utilize o conceito de interface para realizar essas ações.
+- [x] Todas as joias serão coletadas após o uso.
 - [x] Coletavel
 - [x] Intranspassavel
 
@@ -88,10 +112,10 @@ Desenvolver o minigame **Jewel Collector 2.0**, implementado previamente na aula
 - [ ] A quantidade de itens deverá aumentar proporcionalmente ao tamanho do mapa.
 
 #### Classe Radiactive
-- [ ] Criar a partir da fase 2 (tá criado, falta add)
-- [x] símbolo "!!"
-- [x] Retirará 10 pontos de energia, caso o robô passe em posições adjacentes.
-- [x] Elemento será transponível 
+- [x] Criar a partir da fase 2;
+- [x] símbolo "!!";
+- [x] Retirará 10 pontos de energia, caso o robô passe em posições adjacentes;
+- [x] Elemento será transponível;
 - [ ] Caso o robô o transponha, perderá no mínimo 30 pontos de energia e o elemento radioativo desaparecerá do mapa.
 
 
