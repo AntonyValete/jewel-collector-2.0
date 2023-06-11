@@ -2,7 +2,7 @@ namespace JewelCollector
 {
     public abstract class Obstacle : gameObject
     {
-        public Obstacle(int x, int y, bool collectable) : base(x, y, false, collectable) { }
+        public Obstacle(int x, int y, bool collectable, bool passable = false) : base(x, y, passable, collectable) { }
     }
 
     public class Tree : Obstacle
@@ -32,7 +32,7 @@ namespace JewelCollector
     {
         private static string displayName = "!!";
         public static readonly int energyPoints = -10;
-        public Radioactive(int x, int y, bool collectable) : base(x, y, collectable) { }
+        public Radioactive(int x, int y, bool collectable) : base(x, y, collectable, true) { }
         public override string getDisplayName()
         {
             return displayName;

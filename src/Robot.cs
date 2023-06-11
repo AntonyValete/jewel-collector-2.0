@@ -15,8 +15,6 @@ namespace JewelCollector
         public static readonly string displayName = "ME";
         public int totalEnergy;
         public List<Jewel> bag = new List<Jewel>();
-        public (int cx, int cy) coordCache;
-        private (int dx, int dy) coordTemp;
         public delegate void moveDelegateHandler(Collection<gameObject> gameObjectCollection);
         public event moveDelegateHandler gameEvent;
 
@@ -101,22 +99,20 @@ namespace JewelCollector
         public bool checkIfAllowed(int x, int y, gameObject[,] map)
         {
             if (x < 0 || y < 0 || x > (map.GetLength(1) - 1) || y > (map.GetLength(0) - 1)) return false;
-            if (map[x, y].getPassable() == false) return false;
-            return true;
+            return map[x, y].getPassable();
         }
 
         /// <summary>
         /// Method: the Movement method will use the W,A,S,D keys to move the robot through the map, 
         /// calling the checkIfAllowed method to see if the robot is allowed to traverse to the next cell
         /// </summary>
-        public void Movement(ConsoleKey key, ref Map map, gameObject[,] mapRender, Collection<gameObject> gameObjectsCollection)
+        public void Movement(ConsoleKey key, gameObject[,] mapRender, Collection<gameObject> gameObjectsCollection)
         { // método de movimento vai mudar as coordenadas dependendo da tecla pressionada
 
             if (gameEvent != null)
             {
                 bool allowed = false;
                 (int x, int y) = this.getCoordinate();
-                (int dx, int dy) coordTemp = this.getCoordinate();
                 switch (key)
                 {
                     case (ConsoleKey.A):
@@ -140,8 +136,26 @@ namespace JewelCollector
                 // check if next step is empty for movement
                 if (allowed)
                 {
+                    gameObject[,] around = checkAround(mapRender);
+
+                    foreach (gameObject gObject in around)
+                    {
+                        if (gObject is Radioactive)
+                        {
+                            if (gObject.getCoordinate() == (x, y))
+                            {
+                                this.totalEnergy += (Radioactive.energyPoints * 3);
+                                gameObjectsCollection.Remove(gObject);
+                            }
+                            else
+                            {
+                                this.totalEnergy += Radioactive.energyPoints;
+                                gameEvent(gameObjectsCollection);
+                            }
+                        }
+                    }
+
                     this.setCoordinate(x, y);
-                    coordCache = (coordTemp.dx, coordTemp.dy); // suspeito que não precisa mais disso, mas vou deixar por enquanto
                     this.totalEnergy--;
                     gameEvent(gameObjectsCollection);
                 }
