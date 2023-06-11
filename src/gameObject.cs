@@ -5,7 +5,6 @@ namespace JewelCollector
     /// </summary>
     public abstract class gameObject : Coordinate
     {
-        public readonly int energyPoints;
 
         private bool passable { get; set; }
         private bool collectable { get; set; }
@@ -18,16 +17,20 @@ namespace JewelCollector
         }
 
         public abstract string getDisplayName();
-        public bool getPassable() {
+        public bool getPassable()
+        {
             return this.passable;
         }
-        public bool getCollectable() {
+        public bool getCollectable()
+        {
             return this.collectable;
         }
-        public bool getCollected() {
+        public bool getCollected()
+        {
             return this.isCollected;
         }
-        public bool setCollected(bool Collected) {
+        public bool setCollected(bool Collected)
+        {
             return this.isCollected = Collected;
         }
     }
