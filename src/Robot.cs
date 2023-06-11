@@ -24,6 +24,11 @@ namespace JewelCollector
         /// <summary>
         /// Object Constructor: Robot map constructor to create a new robot and position it into the map.
         /// </summary>
+        /// <param name="x">Coordinate X</param>
+        /// <param name="y">Coordinate Y</param>
+        /// <param name="passable">Due to gameObject inheritance, determines if the robot is passable</param>
+        /// <param name="collectable">Due to gameObject inheritance, determines if the robot is collectable</param>
+        /// <param name="totalEnergy">Overwrites the gameObject class to determine the Robot Total Energy</param>
         public Robot(int x, int y, bool passable, bool collectable, int totalEnergy) : base(x, y, passable, collectable)
         {
             setCoordinate(x, y);
@@ -33,6 +38,8 @@ namespace JewelCollector
         /// <summary>
         /// Object: checkAround method creates a 3x3 mini map to check the immediate surroundings of the robot.
         /// </summary>
+        /// <param name="map">map gameObject array</param>
+        /// <returns>The 3x3 surroundings of the robot</returns>
         public gameObject[,] checkAround(gameObject[,] map)
         {
             (int x, int y) = this.getCoordinate();
@@ -60,9 +67,9 @@ namespace JewelCollector
         /// It's important to notice that the Methods getCollected and setCollected will avoid the exploid of
         /// collecting energy infinite times from the Trees.
         /// </summary>
+        /// <param name="map">map gameObject array</param>
         public void collectJewel(ConsoleKey key, gameObject[,] map, Collection<gameObject> gameObjectsCollection)
         {
-
             if (gameEvent != null && key == ConsoleKey.G)
             {
                 gameObject[,] around = checkAround(map);
@@ -90,7 +97,6 @@ namespace JewelCollector
                         }
                     }
                     catch { }
-
                 }
             }
         }
@@ -98,6 +104,9 @@ namespace JewelCollector
         /// <summary>
         /// Method: checkIfAllowed is the exception handler Method for the robot. This will return true if the robot is allowed to traverse to the next cell.
         /// </summary>
+        /// <param name="x">Coordinate X</param>
+        /// <param name="y">Coordinate Y</param>
+        /// <param name="map">map gameObject array</param>
         public bool checkIfAllowed(int x, int y, gameObject[,] map)
         {
             if (x < 0 || y < 0 || x > (map.GetLength(1) - 1) || y > (map.GetLength(0) - 1)) return false;
@@ -109,9 +118,12 @@ namespace JewelCollector
         /// Method: the Movement method will use the W,A,S,D keys to move the robot through the map, 
         /// calling the checkIfAllowed method to see if the robot is allowed to traverse to the next cell
         /// </summary>
+        /// <param name="key">The key pressed.</param>
+        /// <param name="map">map gameObject array.</param>
+        /// <param name="mapRender">The rendered map gameObject array.</param>
+        /// <param name="gameObjectsCollection">The collection for the game objects to be inserted on the map.</param>
         public void Movement(ConsoleKey key, ref Map map, gameObject[,] mapRender, Collection<gameObject> gameObjectsCollection)
-        { // método de movimento vai mudar as coordenadas dependendo da tecla pressionada
-
+        {
             if (gameEvent != null)
             {
                 bool allowed = false;
@@ -136,12 +148,11 @@ namespace JewelCollector
                         allowed = checkIfAllowed(x, y, mapRender);
                         break;
                 }
-
                 // check if next step is empty for movement
                 if (allowed)
                 {
                     this.setCoordinate(x, y);
-                    coordCache = (coordTemp.dx, coordTemp.dy); // suspeito que não precisa mais disso, mas vou deixar por enquanto
+                    // coordCache = (coordTemp.dx, coordTemp.dy);
                     this.totalEnergy--;
                     gameEvent(gameObjectsCollection);
                 }
@@ -151,6 +162,7 @@ namespace JewelCollector
         /// <summary>
         /// Method: getDisplayName will return the display name for the object. This method is a helper to print the name of each gameObject in the map.
         /// </summary>
+        /// <returns>The object property display name.</returns>
         public override string getDisplayName()
         {
             return displayName;
