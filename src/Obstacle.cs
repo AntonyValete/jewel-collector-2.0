@@ -8,7 +8,7 @@ namespace JewelCollector
         /// <summary>
         /// Constructor: Obstacle constructor.
         /// </summary>
-        public Obstacle(int x, int y, bool collectable) : base(x, y, false, collectable) { }
+        public Obstacle(int x, int y, bool passable = false) : base(x, y, passable, false) { }
     }
 
     /// <summary>
@@ -23,7 +23,7 @@ namespace JewelCollector
         /// <summary>
         /// Constructor: Tree constructor.
         /// </summary>
-        public Tree(int x, int y, bool collectable) : base(x, y, collectable) { }
+        public Tree(int x, int y) : base(x, y) { }
 
         /// <summary>
         /// Method: getDisplayName will return the display name for the object. This method is a helper to print the name of each gameObject in the map.
@@ -45,7 +45,7 @@ namespace JewelCollector
         /// <summary>
         /// Constructor: Water constructor.
         /// </summary>
-        public Water(int x, int y, bool collectable) : base(x, y, collectable) { }
+        public Water(int x, int y) : base(x, y) { }
 
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace JewelCollector
         /// <summary>
         /// Constructor: Radioactive constructor.
         /// </summary>
-        public Radioactive(int x, int y, bool collectable) : base(x, y, collectable) { }
+        public Radioactive(int x, int y) : base(x, y, true) { }
 
         /// <summary>
         /// Method: getDisplayName will return the display name for the object. This method is a helper to print the name of each gameObject in the map.
