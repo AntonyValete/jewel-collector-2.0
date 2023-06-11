@@ -2,8 +2,6 @@ namespace JewelCollector
 {
     public abstract class gameObject : Coordinate
     {
-        public readonly int energyPoints;
-
         private bool passable { get; set; }
         private bool collectable { get; set; }
         private bool isCollected { get; set; }
@@ -15,16 +13,20 @@ namespace JewelCollector
         }
 
         public abstract string getDisplayName();
-        public bool getPassable() {
+        public bool getPassable()
+        {
             return this.passable;
         }
-        public bool getCollectable() {
+        public bool getCollectable()
+        {
             return this.collectable;
         }
-        public bool getCollected() {
+        public bool getCollected()
+        {
             return this.isCollected;
         }
-        public bool setCollected(bool Collected) {
+        public bool setCollected(bool Collected)
+        {
             return this.isCollected = Collected;
         }
     }
@@ -32,7 +34,7 @@ namespace JewelCollector
     public class Empty : gameObject
     {
         private static readonly string displayName = "--";
-        public Empty(int x, int y, bool passable, bool collectable) : base(x, y, passable, collectable) { }
+        public Empty(int x, int y) : base(x, y, true, false) { }
 
         public override string getDisplayName()
         {
