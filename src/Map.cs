@@ -8,7 +8,7 @@ namespace JewelCollector
     public class Map
     {
         public gameObject[,] map;
-        private Robot robot;
+        public Robot robot;
 
         /// <summary>
         /// Constructor: Map constructor.
@@ -20,10 +20,8 @@ namespace JewelCollector
             this.robot = robot;
         }
 
-        public void Print(Collection<gameObject> gameObjectCollection) // Agora a cada movimento o print renderiza e insere os objetos no mapa
+        public void PopulateMap(Collection<gameObject> gameObjectCollection)
         {
-            Console.Clear();
-            // TODO: Aqui não seria melhor criar um outro método chamado PopulateMap(Collection<gameObject> gameObjectCollection);?
             for (int i = 0; i < this.map.GetLength(0); i++)
             {
                 for (int j = 0; j < this.map.GetLength(1); j++)
@@ -45,8 +43,10 @@ namespace JewelCollector
                     }
                 }
             }
-
-            // Aqui printa
+        }
+        public void Print(Collection<gameObject> gameObjectCollection) // Agora a cada movimento o print renderiza e insere os objetos no mapa
+        {
+            Console.Clear();
             for (int i = 0; i < this.map.GetLength(0); i++)
             {
                 for (int j = 0; j < this.map.GetLength(1); j++)
@@ -78,11 +78,17 @@ namespace JewelCollector
                             Console.ForegroundColor = ConsoleColor.Gray;
                             break;
                     }
-                    // else if (this.map[i, j] != robot) Console.ForegroundColor = ConsoleColor.Gray;
                     Console.Write(this.map[i, j].getDisplayName() + " ");
                 }
                 Console.WriteLine();
             }
+            Console.ForegroundColor = ConsoleColor.Gray;
+        }
+
+        public void mapRender(Collection<gameObject> gameObjectCollection)
+        {
+            this.PopulateMap(gameObjectCollection);
+            this.Print(gameObjectCollection);
         }
 
         public void MovementEvent(ConsoleKey key, gameObject[,] mapRender, Collection<gameObject> gameObjectsCollection)

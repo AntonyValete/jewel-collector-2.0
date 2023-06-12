@@ -13,6 +13,7 @@ namespace JewelCollector
     public class Robot : gameObject
     {
         public static readonly string displayName = "ME";
+        public int phasePoints;
         public int totalEnergy;
         public List<Jewel> bag = new List<Jewel>();
         public delegate void moveDelegateHandler(Collection<gameObject> gameObjectCollection);
@@ -29,6 +30,7 @@ namespace JewelCollector
         /// <param name="totalEnergy">Overwrites the gameObject class to determine the Robot Total Energy</param>
         public Robot(int x, int y, int totalEnergy) : base(x, y, false, false)
         {
+            phasePoints = 0;
             setCoordinate(x, y);
             this.totalEnergy = totalEnergy;
         }
@@ -89,6 +91,8 @@ namespace JewelCollector
                                 Console.WriteLine("energia!");
                                 this.totalEnergy += BlueJewel.energyPoints;
                             }
+                            Jewel Temp = (Jewel)gObject;
+                            this.phasePoints += Temp.value;
                             this.bag.Add((Jewel)gObject);
                             gameObjectsCollection.Remove(gObject);
                             gameEvent(gameObjectsCollection);

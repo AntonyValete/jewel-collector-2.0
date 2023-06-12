@@ -41,82 +41,109 @@ namespace JewelCollector
                 new Tree(1, 4)
             };
 
-            // criei um robo de teste
-            var testerbot = new Robot(1, 1, 100); // deixei em 100 para conseguir testar, dps muda
-            ConsoleKeyInfo keyinfo; // definição da variavel da tecla pressionada
+            ConsoleKeyInfo keyinfo;
             bool gameRunning = true;
             int gamePhase = 1;
             int mapDimension = 10;
-            var map = new Map(testerbot, gameObjectCollection, mapDimension);
+            var map = new Map(new Robot(0, 0, 5), gameObjectCollection, mapDimension);
+            int totalPoints = 0;
 
             do
             {
-                map.Print(gameObjectCollection);
+                map.mapRender(gameObjectCollection);
 
-                Console.ForegroundColor = ConsoleColor.Gray;
-                Console.Write("Energia: ");
-                Console.WriteLine(testerbot.totalEnergy);
+                Console.WriteLine($"Energia: {map.robot.totalEnergy}");
+                Console.WriteLine($"Pontuação da fase: {map.robot.phasePoints}");
+                Console.WriteLine($"Pontuação total: {totalPoints}");
                 Console.Write("Bag: ");
-                foreach (Jewel item in testerbot.bag)
+                foreach (Jewel item in map.robot.bag)
                 {
                     Console.Write(item.getDisplayName() + " ");
                 }
-                Console.Write($"Fase: {gamePhase}");
+                Console.WriteLine($"Fase: {gamePhase}");
+                Console.WriteLine(map.robot.getCoordinate());
 
-                Console.WriteLine("\n" + testerbot.getCoordinate()); // printa as novas coordenadas
                 Console.Write("Insira um movimento: ");
-                keyinfo = Console.ReadKey(); // lê o evento do teclado
+                keyinfo = Console.ReadKey();
                 Console.WriteLine();
-                testerbot.collectJewel(keyinfo.Key, map.map, gameObjectCollection);
-                map.MovementEvent(keyinfo.Key, map.map, gameObjectCollection); // printa a tecla pressionada
+                map.robot.collectJewel(keyinfo.Key, map.map, gameObjectCollection);
+                map.MovementEvent(keyinfo.Key, map.map, gameObjectCollection);
 
                 if (!gameObjectCollection.OfType<Jewel>().Any())
                 {
                     gamePhase++;
-                    (testerbot, map, gameObjectCollection) = newphase(map);
+                    totalPoints += map.robot.phasePoints;
+                    (map.robot, map, gameObjectCollection) = newphase(map);
                 }
 
-                if (keyinfo.Key == ConsoleKey.X || keyinfo.Key == ConsoleKey.Q || testerbot.totalEnergy == 0)
+                if (keyinfo.Key == ConsoleKey.X || keyinfo.Key == ConsoleKey.Q || map.robot.totalEnergy <= 0)
                     gameRunning = false; //eXit
             } while (gameRunning == true);
         }
 
+        private static List<(int, int)> GetRandomCoordinates(int to, int numberOfElements, int from = 1)
+        {
+            Random rnd = new Random();
+            HashSet<(int, int)> temp = new HashSet<(int, int)>();
+            for (int i = 0; i < numberOfElements; i++)
+                while (!temp.Add((rnd.Next(from, to), rnd.Next(from, to))));
+            return temp.ToList();
+        }
+
         static (Robot, Map, Collection<gameObject>) newphase(Map map)
         {
-
-            var newBot = new Robot(1, 1, 100);
+            Collection<gameObject> gameObjectCollection = new Collection<gameObject>() {};
             int mapDimension = map.map.GetLength(0) + 1;
+            int Ratio = (mapDimension * mapDimension) * 18 / 100;
+            int JewelRatio = (mapDimension * mapDimension) * 6 / 100;
+            int ObstacleRatio = (mapDimension * mapDimension) * 11 / 100;
+            int RadioactiveRatio = (mapDimension * mapDimension) * 1 / 100;
+            var newBot = new Robot(0, 0, Ratio);
 
-            Random rand = new Random(); // pensei em usar um random para colocar os novos objetos de maneira aleatória
-            Collection<gameObject> gameObjectCollection = new Collection<gameObject>() {
-
-            new RedJewel(1, 9),
-            new RedJewel(8, 8),
-            new GreenJewel(9, 1),
-            new GreenJewel(7, 6),
-            new BlueJewel(3, 4),
-            new BlueJewel(2, 1),
-
-            new Water(5, 0),
-            new Water(5, 1),
-            new Water(5, 2),
-            new Water(5, 3),
-            new Water(5, 4),
-            new Water(5, 5),
-
-            new Tree(5, 9),
-            new Tree(3, 9),
-            new Tree(8, 3),
-            new Tree(2, 5),
-            new Tree(1, 4),
-
-            new Radioactive(9, 9)
-            };
+            var uniqueCoordinates = GetRandomCoordinates(mapDimension, Ratio);
+            Random rnd = new Random(Guid.NewGuid().GetHashCode());
+            int x, y, type, j = 0;           
+            
+            // Populate map with Jewel
+            for (int i = 0; i < JewelRatio; i++)
+            {
+                type = rnd.Next(3);
+                (x, y) = uniqueCoordinates[j++];
+                switch (type) 
+                {
+                    case 0:
+                        gameObjectCollection.Add(new RedJewel(x, y));
+                        break;
+                    case 1:
+                        gameObjectCollection.Add(new GreenJewel(x, y));
+                        break;
+                    case 2:
+                        gameObjectCollection.Add(new BlueJewel(x, y));
+                        break;
+                }
+            }
+            for (int i = 0; i < ObstacleRatio; i++)
+            {
+                type = rnd.Next(2);
+                (x, y) = uniqueCoordinates[j++];
+                switch (type) 
+                {
+                    case 0:
+                        gameObjectCollection.Add(new Tree(x, y));
+                        break;
+                    case 1:
+                        gameObjectCollection.Add(new Water(x, y));
+                        break;
+                }
+            }
+            for (int i = 0; i < RadioactiveRatio; i++)
+            {
+                (x, y) = uniqueCoordinates[j++];
+                gameObjectCollection.Add(new Radioactive(x, y));
+            }
 
             Map newMap = new Map(newBot, gameObjectCollection, mapDimension);
-
             return (newBot, newMap, gameObjectCollection);
-
         }
     }
 }
