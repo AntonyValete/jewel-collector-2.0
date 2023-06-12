@@ -25,7 +25,8 @@
 var NAVTREE =
 [
   [ "JewelCollector", "index.html", [
-    [ "Jewel Collector - C# + .NET 7.0 Minigame", "index.html", "index" ],
+    [ "Jewel Collector - C# + .NET 7.0 Minigame", "index.html", null ],
+    [ "Jewel Collector - Roadmap Checklist:", "md__g_1_2e_books_2___extecamp_2jewel-collector-2_80_2checklist.html", null ],
     [ "Packages", "namespaces.html", [
       [ "Package List", "namespaces.html", "namespaces_dup" ]
     ] ],

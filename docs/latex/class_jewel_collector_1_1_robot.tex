@@ -14,7 +14,7 @@ Inheritance diagram for Robot\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_jewel_collector_1_1_robot_a95a6ae2f5e6e112f93b8afc51929c854}{Robot}} (\mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}, \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}, bool \mbox{\hyperlink{class_jewel_collector_1_1game_object_a8796f00bd2cdaa2055ab82bbccbd67b6}{passable}}, bool \mbox{\hyperlink{class_jewel_collector_1_1game_object_a4344f0c7b243fef4096651525cd9f8c7}{collectable}}, \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_robot_a6ddf336ce608004c8209aabd0f0322fc}{total\+Energy}})
+\mbox{\hyperlink{class_jewel_collector_1_1_robot_a9d78e147a4f63826f5928b7770a79326}{Robot}} (\mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}, \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}, \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_robot_a6ddf336ce608004c8209aabd0f0322fc}{total\+Energy}})
 \begin{DoxyCompactList}\small\item\em Object Constructor\+: Robot map constructor to create a new robot and position it into the map. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_jewel_collector_1_1game_object}{game\+Object}}\mbox{[},\mbox{]} \mbox{\hyperlink{class_jewel_collector_1_1_robot_aadc4914f64754e61f27acab4e798f65e}{check\+Around}} (\mbox{\hyperlink{class_jewel_collector_1_1game_object}{game\+Object}}\mbox{[},\mbox{]} map)
 \begin{DoxyCompactList}\small\item\em Object\+: check\+Around method creates a 3x3 mini map to check the immediate surroundings of the robot. \end{DoxyCompactList}\item 
@@ -26,28 +26,28 @@ override string \mbox{\hyperlink{class_jewel_collector_1_1_robot_a5ee08c326c597e
 \begin{DoxyCompactList}\small\item\em Method\+: get\+Display\+Name will return the display name for the object. This method is a helper to print the name of each game\+Object in the map. \end{DoxyCompactList}\item 
 delegate void \mbox{\hyperlink{class_jewel_collector_1_1_robot_ac1819852511d628a0d9244a8eceddaa8}{move\+Delegate\+Handler}} (Collection$<$ \mbox{\hyperlink{class_jewel_collector_1_1game_object}{game\+Object}} $>$ game\+Object\+Collection)
 \item 
-void \mbox{\hyperlink{class_jewel_collector_1_1_robot_a82f22e26aa0397ee5a71aace6a8464b3}{Movement}} (Console\+Key key, ref \mbox{\hyperlink{class_jewel_collector_1_1_map}{Map}} map, \mbox{\hyperlink{class_jewel_collector_1_1game_object}{game\+Object}}\mbox{[},\mbox{]} map\+Render, Collection$<$ \mbox{\hyperlink{class_jewel_collector_1_1game_object}{game\+Object}} $>$ game\+Objects\+Collection)
+void \mbox{\hyperlink{class_jewel_collector_1_1_robot_a93848a9b62b1b2f2e61919e6101550bf}{Movement}} (Console\+Key key, \mbox{\hyperlink{class_jewel_collector_1_1game_object}{game\+Object}}\mbox{[},\mbox{]} map\+Render, Collection$<$ \mbox{\hyperlink{class_jewel_collector_1_1game_object}{game\+Object}} $>$ game\+Objects\+Collection)
 \begin{DoxyCompactList}\small\item\em Method\+: the Movement method will use the W,A,S,D keys to move the robot through the map, calling the check\+If\+Allowed method to see if the robot is allowed to traverse to the next cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_jewel_collector_1_1game_object}{game\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_jewel_collector_1_1game_object_afcfaa39f2ad89f79f1a102dced8db7e6}{game\+Object}} (\mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}, \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}, bool \mbox{\hyperlink{class_jewel_collector_1_1game_object_a8796f00bd2cdaa2055ab82bbccbd67b6}{passable}}, bool \mbox{\hyperlink{class_jewel_collector_1_1game_object_a4344f0c7b243fef4096651525cd9f8c7}{collectable}})
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor\+: game\+Object constructor. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_jewel_collector_1_1game_object_a63f6f212ce6b12d4c3b45cc7bc27664c}{get\+Collectable}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Method\+: get\+Collectable will return the passable attribute to the caller. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_jewel_collector_1_1game_object_aeba5d22eeb4bf611b793e43269b711d9}{get\+Collected}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Method\+: get\+Collected will return the passable attribute to the caller. \end{DoxyCompactList}\item 
 abstract string \mbox{\hyperlink{class_jewel_collector_1_1game_object_a29f1cea3f044aac007f6c01613ec0a53}{get\+Display\+Name}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Abstract method\+: get\+Display\+Name is abstract method that has to be implemented in all direct subclasses. This helps to garantee that all subclasses has this implementation. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_jewel_collector_1_1game_object_ade7f5fae37594c7fffa1a5b410b6fa39}{get\+Passable}} ()
-\item 
-bool \mbox{\hyperlink{class_jewel_collector_1_1game_object_a006e45beb96f1d7c3d29553eb2009a9e}{set\+Collected}} (bool Collected)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Method\+: get\+Passable will return the passable attribute to the caller. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jewel_collector_1_1game_object_acbdaf32f2d113003d55443384e16f81f}{set\+Collected}} (bool Collected)
+\begin{DoxyCompactList}\small\item\em Method\+: set\+Collected will set the collected attribute. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_jewel_collector_1_1_coordinate}{Coordinate}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a0afb385911604bff77eb67e6e9f439a9}{Coordinate}} (\mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}, \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}})
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor\+: Coordinate constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_ae74f5eacbecb291fdc7692e25c6905d4}{get\+Coordinate}} ()
 \item 
 void \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a78b30912a83b6b5356d7ec1e8f59e117}{set\+Coordinate}} (\mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}, \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}})
@@ -57,16 +57,9 @@ void \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a78b30912a83b6b5356d7
 \item 
 List$<$ \mbox{\hyperlink{class_jewel_collector_1_1_jewel}{Jewel}} $>$ \mbox{\hyperlink{class_jewel_collector_1_1_robot_ac6fef274ca23f42c7012f26caf257da7}{bag}} = new List$<$\mbox{\hyperlink{class_jewel_collector_1_1_jewel}{Jewel}}$>$()
 \item 
-\mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} cy \mbox{\hyperlink{class_jewel_collector_1_1_robot_aca45124610e8214b463dc8603edc75bb}{coord\+Cache}}
-\item 
-\mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_robot_af905a9989361d094908ad04e08f6429d}{cx}}
+\mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_robot_a3232be5641593172a96a22d0efde3a9f}{phase\+Points}}
 \item 
 \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_robot_a6ddf336ce608004c8209aabd0f0322fc}{total\+Energy}}
-\end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_jewel_collector_1_1game_object}{game\+Object}}}
-\begin{DoxyCompactItemize}
-\item 
-readonly \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1game_object_a7d6dc9456f21b10b99412913c02f9e49}{energy\+Points}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_jewel_collector_1_1_coordinate}{Coordinate}}}
 \begin{DoxyCompactItemize}
@@ -82,13 +75,6 @@ static readonly string \mbox{\hyperlink{class_jewel_collector_1_1_robot_acf7b1ee
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_jewel_collector_1_1_robot_ac1819852511d628a0d9244a8eceddaa8}{move\+Delegate\+Handler}} \mbox{\hyperlink{class_jewel_collector_1_1_robot_a562f780f33f0e950fa899ce6a750c5b2}{game\+Event}}
-\end{DoxyCompactItemize}
-\doxysubsubsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} dy \mbox{\hyperlink{class_jewel_collector_1_1_robot_a57fb1c7101876f6543275979d9a179cb}{coord\+Temp}}
-\item 
-\mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_robot_a6a0d40b2ed6d9e674f93396212f0028f}{dx}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Properties inherited from \mbox{\hyperlink{class_jewel_collector_1_1game_object}{game\+Object}}}
@@ -113,11 +99,11 @@ bool \mbox{\hyperlink{class_jewel_collector_1_1game_object_a8796f00bd2cdaa2055ab
 Class\+: Robot class starter. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{class_jewel_collector_1_1_robot_a95a6ae2f5e6e112f93b8afc51929c854}\label{class_jewel_collector_1_1_robot_a95a6ae2f5e6e112f93b8afc51929c854} 
+\Hypertarget{class_jewel_collector_1_1_robot_a9d78e147a4f63826f5928b7770a79326}\label{class_jewel_collector_1_1_robot_a9d78e147a4f63826f5928b7770a79326} 
 \index{Robot@{Robot}!Robot@{Robot}}
 \index{Robot@{Robot}!Robot@{Robot}}
 \doxysubsubsection{\texorpdfstring{Robot()}{Robot()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_jewel_collector_1_1_robot}{Robot}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{x,  }\item[{\mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{y,  }\item[{bool}]{passable,  }\item[{bool}]{collectable,  }\item[{\mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{total\+Energy }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_jewel_collector_1_1_robot}{Robot}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{x,  }\item[{\mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{y,  }\item[{\mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}}}]{total\+Energy }\end{DoxyParamCaption})}
 
 
 
@@ -217,11 +203,11 @@ Implements \mbox{\hyperlink{class_jewel_collector_1_1game_object_a29f1cea3f044aa
 \doxysubsubsection{\texorpdfstring{moveDelegateHandler()}{moveDelegateHandler()}}
 {\footnotesize\ttfamily delegate void move\+Delegate\+Handler (\begin{DoxyParamCaption}\item[{Collection$<$ \mbox{\hyperlink{class_jewel_collector_1_1game_object}{game\+Object}} $>$}]{game\+Object\+Collection }\end{DoxyParamCaption})}
 
-\Hypertarget{class_jewel_collector_1_1_robot_a82f22e26aa0397ee5a71aace6a8464b3}\label{class_jewel_collector_1_1_robot_a82f22e26aa0397ee5a71aace6a8464b3} 
+\Hypertarget{class_jewel_collector_1_1_robot_a93848a9b62b1b2f2e61919e6101550bf}\label{class_jewel_collector_1_1_robot_a93848a9b62b1b2f2e61919e6101550bf} 
 \index{Robot@{Robot}!Movement@{Movement}}
 \index{Movement@{Movement}!Robot@{Robot}}
 \doxysubsubsection{\texorpdfstring{Movement()}{Movement()}}
-{\footnotesize\ttfamily void Movement (\begin{DoxyParamCaption}\item[{Console\+Key}]{key,  }\item[{ref \mbox{\hyperlink{class_jewel_collector_1_1_map}{Map}}}]{map,  }\item[{\mbox{\hyperlink{class_jewel_collector_1_1game_object}{game\+Object}}}]{map\+Render\mbox{[},\mbox{]},  }\item[{Collection$<$ \mbox{\hyperlink{class_jewel_collector_1_1game_object}{game\+Object}} $>$}]{game\+Objects\+Collection }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Movement (\begin{DoxyParamCaption}\item[{Console\+Key}]{key,  }\item[{\mbox{\hyperlink{class_jewel_collector_1_1game_object}{game\+Object}}}]{map\+Render\mbox{[},\mbox{]},  }\item[{Collection$<$ \mbox{\hyperlink{class_jewel_collector_1_1game_object}{game\+Object}} $>$}]{game\+Objects\+Collection }\end{DoxyParamCaption})}
 
 
 
@@ -247,35 +233,17 @@ Method\+: the Movement method will use the W,A,S,D keys to move the robot throug
 \doxysubsubsection{\texorpdfstring{bag}{bag}}
 {\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_jewel_collector_1_1_jewel}{Jewel}}$>$ bag = new List$<$\mbox{\hyperlink{class_jewel_collector_1_1_jewel}{Jewel}}$>$()}
 
-\Hypertarget{class_jewel_collector_1_1_robot_aca45124610e8214b463dc8603edc75bb}\label{class_jewel_collector_1_1_robot_aca45124610e8214b463dc8603edc75bb} 
-\index{Robot@{Robot}!coordCache@{coordCache}}
-\index{coordCache@{coordCache}!Robot@{Robot}}
-\doxysubsubsection{\texorpdfstring{coordCache}{coordCache}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} cy coord\+Cache}
-
-\Hypertarget{class_jewel_collector_1_1_robot_a57fb1c7101876f6543275979d9a179cb}\label{class_jewel_collector_1_1_robot_a57fb1c7101876f6543275979d9a179cb} 
-\index{Robot@{Robot}!coordTemp@{coordTemp}}
-\index{coordTemp@{coordTemp}!Robot@{Robot}}
-\doxysubsubsection{\texorpdfstring{coordTemp}{coordTemp}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} dy coord\+Temp\hspace{0.3cm}{\ttfamily [private]}}
-
-\Hypertarget{class_jewel_collector_1_1_robot_af905a9989361d094908ad04e08f6429d}\label{class_jewel_collector_1_1_robot_af905a9989361d094908ad04e08f6429d} 
-\index{Robot@{Robot}!cx@{cx}}
-\index{cx@{cx}!Robot@{Robot}}
-\doxysubsubsection{\texorpdfstring{cx}{cx}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} cx}
-
 \Hypertarget{class_jewel_collector_1_1_robot_acf7b1eeaec82cea9545a783b47e16ad1}\label{class_jewel_collector_1_1_robot_acf7b1eeaec82cea9545a783b47e16ad1} 
 \index{Robot@{Robot}!displayName@{displayName}}
 \index{displayName@{displayName}!Robot@{Robot}}
 \doxysubsubsection{\texorpdfstring{displayName}{displayName}}
 {\footnotesize\ttfamily readonly string display\+Name = \"{}ME\"{}\hspace{0.3cm}{\ttfamily [static]}}
 
-\Hypertarget{class_jewel_collector_1_1_robot_a6a0d40b2ed6d9e674f93396212f0028f}\label{class_jewel_collector_1_1_robot_a6a0d40b2ed6d9e674f93396212f0028f} 
-\index{Robot@{Robot}!dx@{dx}}
-\index{dx@{dx}!Robot@{Robot}}
-\doxysubsubsection{\texorpdfstring{dx}{dx}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} dx\hspace{0.3cm}{\ttfamily [private]}}
+\Hypertarget{class_jewel_collector_1_1_robot_a3232be5641593172a96a22d0efde3a9f}\label{class_jewel_collector_1_1_robot_a3232be5641593172a96a22d0efde3a9f} 
+\index{Robot@{Robot}!phasePoints@{phasePoints}}
+\index{phasePoints@{phasePoints}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{phasePoints}{phasePoints}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} phase\+Points}
 
 \Hypertarget{class_jewel_collector_1_1_robot_a6ddf336ce608004c8209aabd0f0322fc}\label{class_jewel_collector_1_1_robot_a6ddf336ce608004c8209aabd0f0322fc} 
 \index{Robot@{Robot}!totalEnergy@{totalEnergy}}
@@ -296,4 +264,4 @@ Method\+: the Movement method will use the W,A,S,D keys to move the robot throug
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-src/\mbox{\hyperlink{_robot_8cs}{Robot.\+cs}}\end{DoxyCompactItemize}
+G\+:/e\+Books/\+\_\+\+Extecamp/jewel-\/collector-\/2.\+0/src/\mbox{\hyperlink{_robot_8cs}{Robot.\+cs}}\end{DoxyCompactItemize}

@@ -1,7 +1,7 @@
 \chapter{Jewel Collector -\/ C\# + .NET 7.0 Minigame}
 \hypertarget{index}{}\label{index}\index{Jewel Collector -\/ C\# + .NET 7.0 Minigame@{Jewel Collector -\/ C\# + .NET 7.0 Minigame}}
-\label{index_md__r_e_a_d_m_e}%
-\Hypertarget{index_md__r_e_a_d_m_e}%
+\label{index_md__g_1_2e_books_2___extecamp_2jewel-collector-2_80_2_r_e_a_d_m_e}%
+\Hypertarget{index_md__g_1_2e_books_2___extecamp_2jewel-collector-2_80_2_r_e_a_d_m_e}%
 
 
 {\bfseries{Jewel Collector}} é um minigame desenvolvido durante a disciplina de {\bfseries{programação em C\# + .NET do curso Tecnologias Microsoft -\/ Extecamp (Universidade Estadual de Campinas)}}. O objetivo do jogo é coletar jóias para sobreviver em um campo de obstáculos, utilizando o menor número de movimentos possível para conseguir passar para a próxima fase. Para isso, o {\bfseries{Robô (ME)}} coleta as jóias ou recursos e coloca em sua bolsa para ganhar {\bfseries{Energia}}.
@@ -16,114 +16,25 @@ A cada fase o mapa do jogo aumenta, e o desafio fica mais difícil, já que cada
 \item \#\#\+: Obstáculo\+: Água;
 \item {\bfseries{\$\$\+:}} Obstáculo\+: Árvore. Restaura 3 pontos de energia;
 \item {\bfseries{!!\+:}} Obstáculo\+: Radioativo. Elimina 10 pontos de energia;
-\end{DoxyItemize}\hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Detalhes de implementação\+:}{Detalhes de implementação:}}\label{index_autotoc_md1}
-Os seguintes requisitos foram necessários para a construção do jogo. A estrutura geral utilizada para sua construção toma como base os detalhes de implementação a seguir. Algumas escolhas também foram tomadas para a otimização do código, bem como funcionalidades que a equipe achou interessante. A \href{https://antonyvalete.github.io/jewel-collector-2.0/html/index.html}{\texttt{ documentação}} do projeto foi gerada utilizando \href{https://www.doxygen.nl/index.html}{\texttt{ Doxygen}} com o tema \href{https://github.com/jothepro/doxygen-awesome-css}{\texttt{ Doxygen-\/\+Awesome}}.\hypertarget{index_autotoc_md2}{}\doxysubsection{\texorpdfstring{Requisitos na construção do código}{Requisitos na construção do código}}\label{index_autotoc_md2}
-
-\begin{DoxyItemize}
-\item \mbox{[}x\mbox{]} Devem ser usados, tanto arrays como alguma instância de uma Collection (a seu critério)
-\item \mbox{[}x\mbox{]} Mecanismo de Eventos para captura dos eventos de teclado e visualização do mapa no console
-\item \mbox{[}x\mbox{]} Geração de Documentação Automática\+: Todas as classes, os métodos públicos das classes utilizadas, bem como os fields públicos devem ser comentados e incluídos na documentação gerada.
-\item \mbox{[}x\mbox{]} Implemente o mapa como uma matriz de items (jewels, obstacles, demais elementos mostrados no mapa). Seu código deverá imprimir o mapa de forma simples, como no exemplo abaixo (não necessariamente dessa maneira)\+:
-\end{DoxyItemize}
-
-
+\end{DoxyItemize}\hypertarget{index_autotoc_md17}{}\doxysubsection{\texorpdfstring{Detalhes de implementação\+:}{Detalhes de implementação:}}\label{index_autotoc_md17}
+Os requisitos necessários para a construção do jogo foram passados durante o desenvolvimento da disciplina. A partir deles elaboramos uma \doxysectlink{md__g_1_2e_books_2___extecamp_2jewel-collector-2_80_2checklist}{Checklist}{0} de implementação com as funcionalidades necessárias. A estrutura geral utilizada para sua construção toma como base os detalhes de implementação contidos na checklist. Algumas escolhas também foram tomadas para a otimização do código, bem como funcionalidades que a equipe achou interessante.\hypertarget{index_autotoc_md18}{}\doxysubsection{\texorpdfstring{Compilando Jewel Collector}{Compilando Jewel Collector}}\label{index_autotoc_md18}
+Jewel Collector está disponível para Windows, Linux ou Mac\+OS. Para compilar o programa, primeiro é necessário ter feito o download e instalado o \href{https://dotnet.microsoft.com/en-us/download/dotnet/7.0}{\texttt{ .NET 7.\+0}} localmente. Com isso, basta baixar o programa e executá-\/lo utilizando o {\ttfamily dotnet run}. 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{void}\ PrintMap()\ \{}
-\DoxyCodeLine{}
-\DoxyCodeLine{\ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ map.GetLength(0);\ i++)\ \{}
-\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ map.GetLength(1);\ j++)\ \{}
-\DoxyCodeLine{\ \ \ \ \ \ Console.Write(map[i,\ j]);}
-\DoxyCodeLine{\ \ \ \ \}}
-\DoxyCodeLine{\ \ \ \ Console.Write(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
-\DoxyCodeLine{\ \ \}}
-\DoxyCodeLine{}
-\DoxyCodeLine{\}}
+\DoxyCodeLine{git\ clone\ https://github.com/AntonyValete/jewel-\/collector-\/2.0.git}
+\DoxyCodeLine{cd\ jewel-\/collector-\/2.0/src}
+\DoxyCodeLine{dotnet\ run}
 
 \end{DoxyCode}
-
-
-{\itshape Note que o uso de polimorfismo se fará necessário, pois a variável map precisará armazenar os diversos tipos de objetos. Dica\+: Para escrever o objeto na tela, sobrescreva a método To\+String em cada classe.}\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{Checklist\+:}{Checklist:}}\label{index_autotoc_md3}
-\hypertarget{index_autotoc_md4}{}\doxysubsubsection{\texorpdfstring{Classe Robot\+:}{Classe Robot:}}\label{index_autotoc_md4}
+\hypertarget{index_autotoc_md19}{}\doxysubsection{\texorpdfstring{Documentação}{Documentação}}\label{index_autotoc_md19}
+A \href{https://antonyvalete.github.io/jewel-collector-2.0/html/index.html}{\texttt{ documentação}} do projeto foi gerada utilizando \href{https://www.doxygen.nl/index.html}{\texttt{ Doxygen}} com o tema \href{https://github.com/jothepro/doxygen-awesome-css}{\texttt{ Doxygen-\/\+Awesome}}.\hypertarget{index_autotoc_md20}{}\doxysubsection{\texorpdfstring{Colaboradores}{Colaboradores}}\label{index_autotoc_md20}
 
 \begin{DoxyItemize}
-\item \mbox{[}x\mbox{]} Inicia 5 Pontos de energia
-\item \mbox{[}x\mbox{]} deslocamento às 4 direções
-\item \mbox{[}x\mbox{]} perda de 1 ponto de energia com deslocamento
-\item \mbox{[}x\mbox{]} Limite de movimentos dentro do mapa
-\item \mbox{[}x\mbox{]} Símbolo \"{}\+ME\"{}
-\item \mbox{[}x\mbox{]} Quando chegar a zero, o robô não poderá se mover mais; e o jogo termina\mbox{]}
-\item \mbox{[}x\mbox{]} Bag com quantidade de itens e pontuação
-\end{DoxyItemize}
+\item \href{https://github.com/AntonyValete}{\texttt{ Antony Valete}}
+\item \href{https://github.com/andavgc}{\texttt{ Andrés Garica}}
+\item \href{https://github.com/lknknm}{\texttt{ Lucas Mellone}}
+\item \href{https://github.com/pedrovinsilferre}{\texttt{ Pedro Ferreira}}
+\end{DoxyItemize}\hypertarget{index_autotoc_md21}{}\doxysubsection{\texorpdfstring{License}{License}}\label{index_autotoc_md21}
+\begin{quote}
+This project is licensed under the GNU Affero General Public License v3.\+0.
 
-{\itshape O robô interage com o ambiente podendo usar os itens no mapa quando ele estiver em posições adjacentes a estes itens. O efeito do uso depende das características do item. Alguns poderão ser coletados (collect), sendo assim removidos do mapa e guardados na sacola do robô. Outros poderão ser usados pelo robô para recarregar (recharge) sua energia. Para usar (coletar/recarregar) um item, use a tecla g.}\hypertarget{index_autotoc_md5}{}\doxysubsubsection{\texorpdfstring{Classe Map}{Classe Map}}\label{index_autotoc_md5}
-
-\begin{DoxyItemize}
-\item \mbox{[}x\mbox{]} Para cada comando executado pelo usuário, imprima o estado atual do mapa, a energia do robô, bem como o estado da sacola do robô (pdoeria ser feito com evento).
-\end{DoxyItemize}\hypertarget{index_autotoc_md6}{}\doxysubsubsection{\texorpdfstring{Vazio}{Vazio}}\label{index_autotoc_md6}
-
-\begin{DoxyItemize}
-\item \mbox{[}x\mbox{]} Símbolo \"{}-\/-\/\"{}
-\item \mbox{[}x\mbox{]} Fazer swap com o robô com o movimento
-\item \mbox{[}x\mbox{]} Aparecer quando uma joia é coletada
-\end{DoxyItemize}\hypertarget{index_autotoc_md7}{}\doxysubsubsection{\texorpdfstring{Classe Jewel}{Classe Jewel}}\label{index_autotoc_md7}
-
-\begin{DoxyItemize}
-\item \mbox{[}x\mbox{]} Todas as joias serão coletadas após o uso.
-\item \mbox{[}x\mbox{]} Coletavel
-\item \mbox{[}x\mbox{]} Intranspassavel
-\end{DoxyItemize}\hypertarget{index_autotoc_md8}{}\doxyparagraph{\texorpdfstring{Blue}{Blue}}\label{index_autotoc_md8}
-
-\begin{DoxyItemize}
-\item \mbox{[}x\mbox{]} Fornecer 5 pontos de energia pro robô
-\item \mbox{[}x\mbox{]} 10 pontos
-\item \mbox{[}X\mbox{]} Símbolo JB
-\item \mbox{[}x\mbox{]} recarregavel
-\end{DoxyItemize}\hypertarget{index_autotoc_md9}{}\doxyparagraph{\texorpdfstring{Red}{Red}}\label{index_autotoc_md9}
-
-\begin{DoxyItemize}
-\item \mbox{[}x\mbox{]} Valor de 100 pontos
-\item \mbox{[}x\mbox{]} Símbolo JR
-\end{DoxyItemize}\hypertarget{index_autotoc_md10}{}\doxyparagraph{\texorpdfstring{Green}{Green}}\label{index_autotoc_md10}
-
-\begin{DoxyItemize}
-\item \mbox{[}x\mbox{]} 50 pontos
-\item \mbox{[}x\mbox{]} Símbolo JG
-\end{DoxyItemize}\hypertarget{index_autotoc_md11}{}\doxysubsubsection{\texorpdfstring{Classe Obstacle}{Classe Obstacle}}\label{index_autotoc_md11}
-
-\begin{DoxyItemize}
-\item \mbox{[}x\mbox{]} As joias e os obstáculos são intransponíveis.
-\end{DoxyItemize}\hypertarget{index_autotoc_md12}{}\doxyparagraph{\texorpdfstring{Water}{Water}}\label{index_autotoc_md12}
-
-\begin{DoxyItemize}
-\item \mbox{[}x\mbox{]} Símbolo \"{}\#\#\"{}
-\item \mbox{[}x\mbox{]} Intranspassavel
-\end{DoxyItemize}\hypertarget{index_autotoc_md13}{}\doxyparagraph{\texorpdfstring{Tree}{Tree}}\label{index_autotoc_md13}
-
-\begin{DoxyItemize}
-\item \mbox{[}x\mbox{]} Recarregável, fornece 3 pontos de energia pro robô
-\end{DoxyItemize}\hypertarget{index_autotoc_md14}{}\doxysubsubsection{\texorpdfstring{Exceções}{Exceções}}\label{index_autotoc_md14}
-
-\begin{DoxyItemize}
-\item \mbox{[}x\mbox{]} robô tenta se deslocar para uma posição fora dos limites do mapa;
-\item \mbox{[}x\mbox{]} robô tenta se deslocar para uma posição ocupada por outro item;
-\item \mbox{[}x\mbox{]} outras situações que achar pertinente o uso de exceções.
-\end{DoxyItemize}\hypertarget{index_autotoc_md15}{}\doxysubsection{\texorpdfstring{Requisitos Fase 2}{Requisitos Fase 2}}\label{index_autotoc_md15}
-
-\begin{DoxyItemize}
-\item \mbox{[}x\mbox{]} Quando todas as joias forem coletadas, o jogo avança para a fase seguinte.
-\item \mbox{[} \mbox{]} Posicionamento aleatorio de joias e obstáculos ~\newline
-
-\end{DoxyItemize}\hypertarget{index_autotoc_md16}{}\doxysubsubsection{\texorpdfstring{Classe Mapa}{Classe Mapa}}\label{index_autotoc_md16}
-
-\begin{DoxyItemize}
-\item \mbox{[}x\mbox{]} A cada nova fase, o mapa aumenta suas dimensões em 1 unidade, até o limite máximo de (30, 30) unidades.
-\item \mbox{[} \mbox{]} A quantidade de itens deverá aumentar proporcionalmente ao tamanho do mapa.
-\end{DoxyItemize}\hypertarget{index_autotoc_md17}{}\doxysubsubsection{\texorpdfstring{Classe Radiactive}{Classe Radiactive}}\label{index_autotoc_md17}
-
-\begin{DoxyItemize}
-\item \mbox{[}x\mbox{]} Criar a partir da fase 2;
-\item \mbox{[}x\mbox{]} símbolo \"{}!!\"{};
-\item \mbox{[}x\mbox{]} Retirará 10 pontos de energia, caso o robô passe em posições adjacentes;
-\item \mbox{[}x\mbox{]} Elemento será transponível;
-\item \mbox{[} \mbox{]} Caso o robô o transponha, perderá no mínimo 30 pontos de energia e o elemento radioativo desaparecerá do mapa. 
-\end{DoxyItemize}
+Friendly reminder\+: Due to academic honesty terms of your institution, it is NOT recommended to use this project under academic organizations to complete assignments. \end{quote}

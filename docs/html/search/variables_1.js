@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['coordcache_0',['coordCache',['../class_jewel_collector_1_1_robot.html#aca45124610e8214b463dc8603edc75bb',1,'JewelCollector::Robot']]],
-  ['coordtemp_1',['coordTemp',['../class_jewel_collector_1_1_robot.html#a57fb1c7101876f6543275979d9a179cb',1,'JewelCollector::Robot']]],
-  ['cx_2',['cx',['../class_jewel_collector_1_1_robot.html#af905a9989361d094908ad04e08f6429d',1,'JewelCollector::Robot']]]
+  ['displayname_0',['displayName',['../class_jewel_collector_1_1_empty.html#acf7b1eeaec82cea9545a783b47e16ad1',1,'JewelCollector.Empty.displayName'],['../class_jewel_collector_1_1_red_jewel.html#acf7b1eeaec82cea9545a783b47e16ad1',1,'JewelCollector.RedJewel.displayName'],['../class_jewel_collector_1_1_green_jewel.html#acf7b1eeaec82cea9545a783b47e16ad1',1,'JewelCollector.GreenJewel.displayName'],['../class_jewel_collector_1_1_blue_jewel.html#acf7b1eeaec82cea9545a783b47e16ad1',1,'JewelCollector.BlueJewel.displayName'],['../class_jewel_collector_1_1_tree.html#aa782ccbdf1d5af49aae11b97a526d56a',1,'JewelCollector.Tree.displayName'],['../class_jewel_collector_1_1_water.html#aa782ccbdf1d5af49aae11b97a526d56a',1,'JewelCollector.Water.displayName'],['../class_jewel_collector_1_1_radioactive.html#aa782ccbdf1d5af49aae11b97a526d56a',1,'JewelCollector.Radioactive.displayName'],['../class_jewel_collector_1_1_robot.html#acf7b1eeaec82cea9545a783b47e16ad1',1,'JewelCollector.Robot.displayName']]]
 ];

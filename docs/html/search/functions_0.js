@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bluejewel_0',['BlueJewel',['../class_jewel_collector_1_1_blue_jewel.html#a35bb0ed38a64cfb6a94929a0b22a90ad',1,'JewelCollector::BlueJewel']]]
+  ['bluejewel_0',['BlueJewel',['../class_jewel_collector_1_1_blue_jewel.html#af5f95494cf09b93af892163477a4f70d',1,'JewelCollector::BlueJewel']]]
 ];

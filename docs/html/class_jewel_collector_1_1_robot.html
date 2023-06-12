@@ -33,7 +33,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">JewelCollector<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">JewelCollector<span id="projectnumber">&#160;2.0</span>
    </div>
    <div id="projectbrief">JewelCollector Console Game. Built with C# + .NET 7.0</div>
   </td>
@@ -103,7 +103,6 @@ $(document).ready(function(){initNavTree('class_jewel_collector_1_1_robot.html',
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#events">Events</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_jewel_collector_1_1_robot-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Robot</div></div>
 </div><!--header-->
@@ -124,9 +123,9 @@ Inheritance diagram for Robot:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a95a6ae2f5e6e112f93b8afc51929c854"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1_robot.html#a95a6ae2f5e6e112f93b8afc51929c854">Robot</a> (<a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="class_jewel_collector_1_1_coordinate.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, <a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="class_jewel_collector_1_1_coordinate.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, bool <a class="el" href="class_jewel_collector_1_1game_object.html#a8796f00bd2cdaa2055ab82bbccbd67b6">passable</a>, bool <a class="el" href="class_jewel_collector_1_1game_object.html#a4344f0c7b243fef4096651525cd9f8c7">collectable</a>, <a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="class_jewel_collector_1_1_robot.html#a6ddf336ce608004c8209aabd0f0322fc">totalEnergy</a>)</td></tr>
-<tr class="memdesc:a95a6ae2f5e6e112f93b8afc51929c854"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object Constructor: Robot map constructor to create a new robot and position it into the map.  <br /></td></tr>
-<tr class="separator:a95a6ae2f5e6e112f93b8afc51929c854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d78e147a4f63826f5928b7770a79326"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1_robot.html#a9d78e147a4f63826f5928b7770a79326">Robot</a> (<a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="class_jewel_collector_1_1_coordinate.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, <a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="class_jewel_collector_1_1_coordinate.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, <a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="class_jewel_collector_1_1_robot.html#a6ddf336ce608004c8209aabd0f0322fc">totalEnergy</a>)</td></tr>
+<tr class="memdesc:a9d78e147a4f63826f5928b7770a79326"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object Constructor: Robot map constructor to create a new robot and position it into the map.  <br /></td></tr>
+<tr class="separator:a9d78e147a4f63826f5928b7770a79326"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadc4914f64754e61f27acab4e798f65e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_jewel_collector_1_1game_object.html">gameObject</a>[,]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1_robot.html#aadc4914f64754e61f27acab4e798f65e">checkAround</a> (<a class="el" href="class_jewel_collector_1_1game_object.html">gameObject</a>[,] map)</td></tr>
 <tr class="memdesc:aadc4914f64754e61f27acab4e798f65e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object: checkAround method creates a 3x3 mini map to check the immediate surroundings of the robot.  <br /></td></tr>
 <tr class="separator:aadc4914f64754e61f27acab4e798f65e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,24 +140,31 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5ee08c326c597e046917d3c9980ac576"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1819852511d628a0d9244a8eceddaa8"><td class="memItemLeft" align="right" valign="top">delegate void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1_robot.html#ac1819852511d628a0d9244a8eceddaa8">moveDelegateHandler</a> (Collection&lt; <a class="el" href="class_jewel_collector_1_1game_object.html">gameObject</a> &gt; gameObjectCollection)</td></tr>
 <tr class="separator:ac1819852511d628a0d9244a8eceddaa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82f22e26aa0397ee5a71aace6a8464b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1_robot.html#a82f22e26aa0397ee5a71aace6a8464b3">Movement</a> (ConsoleKey key, ref <a class="el" href="class_jewel_collector_1_1_map.html">Map</a> map, <a class="el" href="class_jewel_collector_1_1game_object.html">gameObject</a>[,] mapRender, Collection&lt; <a class="el" href="class_jewel_collector_1_1game_object.html">gameObject</a> &gt; gameObjectsCollection)</td></tr>
-<tr class="memdesc:a82f22e26aa0397ee5a71aace6a8464b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method: the Movement method will use the W,A,S,D keys to move the robot through the map, calling the checkIfAllowed method to see if the robot is allowed to traverse to the next cell.  <br /></td></tr>
-<tr class="separator:a82f22e26aa0397ee5a71aace6a8464b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93848a9b62b1b2f2e61919e6101550bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1_robot.html#a93848a9b62b1b2f2e61919e6101550bf">Movement</a> (ConsoleKey key, <a class="el" href="class_jewel_collector_1_1game_object.html">gameObject</a>[,] mapRender, Collection&lt; <a class="el" href="class_jewel_collector_1_1game_object.html">gameObject</a> &gt; gameObjectsCollection)</td></tr>
+<tr class="memdesc:a93848a9b62b1b2f2e61919e6101550bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method: the Movement method will use the W,A,S,D keys to move the robot through the map, calling the checkIfAllowed method to see if the robot is allowed to traverse to the next cell.  <br /></td></tr>
+<tr class="separator:a93848a9b62b1b2f2e61919e6101550bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_jewel_collector_1_1game_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_jewel_collector_1_1game_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_jewel_collector_1_1game_object.html">gameObject</a></td></tr>
 <tr class="memitem:afcfaa39f2ad89f79f1a102dced8db7e6 inherit pub_methods_class_jewel_collector_1_1game_object"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1game_object.html#afcfaa39f2ad89f79f1a102dced8db7e6">gameObject</a> (<a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="class_jewel_collector_1_1_coordinate.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, <a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="class_jewel_collector_1_1_coordinate.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, bool <a class="el" href="class_jewel_collector_1_1game_object.html#a8796f00bd2cdaa2055ab82bbccbd67b6">passable</a>, bool <a class="el" href="class_jewel_collector_1_1game_object.html#a4344f0c7b243fef4096651525cd9f8c7">collectable</a>)</td></tr>
+<tr class="memdesc:afcfaa39f2ad89f79f1a102dced8db7e6 inherit pub_methods_class_jewel_collector_1_1game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor: gameObject constructor.  <br /></td></tr>
 <tr class="separator:afcfaa39f2ad89f79f1a102dced8db7e6 inherit pub_methods_class_jewel_collector_1_1game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63f6f212ce6b12d4c3b45cc7bc27664c inherit pub_methods_class_jewel_collector_1_1game_object"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1game_object.html#a63f6f212ce6b12d4c3b45cc7bc27664c">getCollectable</a> ()</td></tr>
+<tr class="memdesc:a63f6f212ce6b12d4c3b45cc7bc27664c inherit pub_methods_class_jewel_collector_1_1game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method: getCollectable will return the passable attribute to the caller.  <br /></td></tr>
 <tr class="separator:a63f6f212ce6b12d4c3b45cc7bc27664c inherit pub_methods_class_jewel_collector_1_1game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeba5d22eeb4bf611b793e43269b711d9 inherit pub_methods_class_jewel_collector_1_1game_object"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1game_object.html#aeba5d22eeb4bf611b793e43269b711d9">getCollected</a> ()</td></tr>
+<tr class="memdesc:aeba5d22eeb4bf611b793e43269b711d9 inherit pub_methods_class_jewel_collector_1_1game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method: getCollected will return the passable attribute to the caller.  <br /></td></tr>
 <tr class="separator:aeba5d22eeb4bf611b793e43269b711d9 inherit pub_methods_class_jewel_collector_1_1game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29f1cea3f044aac007f6c01613ec0a53 inherit pub_methods_class_jewel_collector_1_1game_object"><td class="memItemLeft" align="right" valign="top">abstract string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1game_object.html#a29f1cea3f044aac007f6c01613ec0a53">getDisplayName</a> ()</td></tr>
+<tr class="memdesc:a29f1cea3f044aac007f6c01613ec0a53 inherit pub_methods_class_jewel_collector_1_1game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract method: getDisplayName is abstract method that has to be implemented in all direct subclasses. This helps to garantee that all subclasses has this implementation.  <br /></td></tr>
 <tr class="separator:a29f1cea3f044aac007f6c01613ec0a53 inherit pub_methods_class_jewel_collector_1_1game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade7f5fae37594c7fffa1a5b410b6fa39 inherit pub_methods_class_jewel_collector_1_1game_object"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1game_object.html#ade7f5fae37594c7fffa1a5b410b6fa39">getPassable</a> ()</td></tr>
+<tr class="memdesc:ade7f5fae37594c7fffa1a5b410b6fa39 inherit pub_methods_class_jewel_collector_1_1game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method: getPassable will return the passable attribute to the caller.  <br /></td></tr>
 <tr class="separator:ade7f5fae37594c7fffa1a5b410b6fa39 inherit pub_methods_class_jewel_collector_1_1game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a006e45beb96f1d7c3d29553eb2009a9e inherit pub_methods_class_jewel_collector_1_1game_object"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1game_object.html#a006e45beb96f1d7c3d29553eb2009a9e">setCollected</a> (bool Collected)</td></tr>
-<tr class="separator:a006e45beb96f1d7c3d29553eb2009a9e inherit pub_methods_class_jewel_collector_1_1game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbdaf32f2d113003d55443384e16f81f inherit pub_methods_class_jewel_collector_1_1game_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1game_object.html#acbdaf32f2d113003d55443384e16f81f">setCollected</a> (bool Collected)</td></tr>
+<tr class="memdesc:acbdaf32f2d113003d55443384e16f81f inherit pub_methods_class_jewel_collector_1_1game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method: setCollected will set the collected attribute.  <br /></td></tr>
+<tr class="separator:acbdaf32f2d113003d55443384e16f81f inherit pub_methods_class_jewel_collector_1_1game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_jewel_collector_1_1_coordinate"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_jewel_collector_1_1_coordinate')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_jewel_collector_1_1_coordinate.html">Coordinate</a></td></tr>
 <tr class="memitem:a0afb385911604bff77eb67e6e9f439a9 inherit pub_methods_class_jewel_collector_1_1_coordinate"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1_coordinate.html#a0afb385911604bff77eb67e6e9f439a9">Coordinate</a> (<a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="class_jewel_collector_1_1_coordinate.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, <a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="class_jewel_collector_1_1_coordinate.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>)</td></tr>
+<tr class="memdesc:a0afb385911604bff77eb67e6e9f439a9 inherit pub_methods_class_jewel_collector_1_1_coordinate"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor: Coordinate constructor.  <br /></td></tr>
 <tr class="separator:a0afb385911604bff77eb67e6e9f439a9 inherit pub_methods_class_jewel_collector_1_1_coordinate"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae74f5eacbecb291fdc7692e25c6905d4 inherit pub_methods_class_jewel_collector_1_1_coordinate"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1_coordinate.html#ae74f5eacbecb291fdc7692e25c6905d4">getCoordinate</a> ()</td></tr>
 <tr class="separator:ae74f5eacbecb291fdc7692e25c6905d4 inherit pub_methods_class_jewel_collector_1_1_coordinate"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -170,15 +176,10 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ac6fef274ca23f42c7012f26caf257da7"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_jewel_collector_1_1_jewel.html">Jewel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1_robot.html#ac6fef274ca23f42c7012f26caf257da7">bag</a> = new List&lt;<a class="el" href="class_jewel_collector_1_1_jewel.html">Jewel</a>&gt;()</td></tr>
 <tr class="separator:ac6fef274ca23f42c7012f26caf257da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca45124610e8214b463dc8603edc75bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> cy&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1_robot.html#aca45124610e8214b463dc8603edc75bb">coordCache</a></td></tr>
-<tr class="separator:aca45124610e8214b463dc8603edc75bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af905a9989361d094908ad04e08f6429d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1_robot.html#af905a9989361d094908ad04e08f6429d">cx</a></td></tr>
-<tr class="separator:af905a9989361d094908ad04e08f6429d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3232be5641593172a96a22d0efde3a9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1_robot.html#a3232be5641593172a96a22d0efde3a9f">phasePoints</a></td></tr>
+<tr class="separator:a3232be5641593172a96a22d0efde3a9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ddf336ce608004c8209aabd0f0322fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1_robot.html#a6ddf336ce608004c8209aabd0f0322fc">totalEnergy</a></td></tr>
 <tr class="separator:a6ddf336ce608004c8209aabd0f0322fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_class_jewel_collector_1_1game_object"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_jewel_collector_1_1game_object')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_jewel_collector_1_1game_object.html">gameObject</a></td></tr>
-<tr class="memitem:a7d6dc9456f21b10b99412913c02f9e49 inherit pub_attribs_class_jewel_collector_1_1game_object"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1game_object.html#a7d6dc9456f21b10b99412913c02f9e49">energyPoints</a></td></tr>
-<tr class="separator:a7d6dc9456f21b10b99412913c02f9e49 inherit pub_attribs_class_jewel_collector_1_1game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_jewel_collector_1_1_coordinate"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_jewel_collector_1_1_coordinate')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_jewel_collector_1_1_coordinate.html">Coordinate</a></td></tr>
 <tr class="memitem:a61569f2965b7a369eb10b6d75d410d11 inherit pub_attribs_class_jewel_collector_1_1_coordinate"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a></td></tr>
 <tr class="memdesc:a61569f2965b7a369eb10b6d75d410d11 inherit pub_attribs_class_jewel_collector_1_1_coordinate"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method: This will return the coordinates of given object.  <br /></td></tr>
@@ -193,13 +194,6 @@ Static Public Attributes</h2></td></tr>
 Events</h2></td></tr>
 <tr class="memitem:a562f780f33f0e950fa899ce6a750c5b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_jewel_collector_1_1_robot.html#ac1819852511d628a0d9244a8eceddaa8">moveDelegateHandler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1_robot.html#a562f780f33f0e950fa899ce6a750c5b2">gameEvent</a></td></tr>
 <tr class="separator:a562f780f33f0e950fa899ce6a750c5b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a57fb1c7101876f6543275979d9a179cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> dy&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1_robot.html#a57fb1c7101876f6543275979d9a179cb">coordTemp</a></td></tr>
-<tr class="separator:a57fb1c7101876f6543275979d9a179cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a0d40b2ed6d9e674f93396212f0028f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jewel_collector_1_1_robot.html#a6a0d40b2ed6d9e674f93396212f0028f">dx</a></td></tr>
-<tr class="separator:a6a0d40b2ed6d9e674f93396212f0028f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -219,8 +213,8 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class: Robot class starter. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a95a6ae2f5e6e112f93b8afc51929c854" name="a95a6ae2f5e6e112f93b8afc51929c854"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95a6ae2f5e6e112f93b8afc51929c854">&#9670;&#160;</a></span>Robot()</h2>
+<a id="a9d78e147a4f63826f5928b7770a79326" name="a9d78e147a4f63826f5928b7770a79326"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d78e147a4f63826f5928b7770a79326">&#9670;&#160;</a></span>Robot()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -236,18 +230,6 @@ Additional Inherited Members</h2></td></tr>
           <td></td>
           <td class="paramtype"><a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a>&#160;</td>
           <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>passable</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>collectable</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -440,8 +422,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a82f22e26aa0397ee5a71aace6a8464b3" name="a82f22e26aa0397ee5a71aace6a8464b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82f22e26aa0397ee5a71aace6a8464b3">&#9670;&#160;</a></span>Movement()</h2>
+<a id="a93848a9b62b1b2f2e61919e6101550bf" name="a93848a9b62b1b2f2e61919e6101550bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93848a9b62b1b2f2e61919e6101550bf">&#9670;&#160;</a></span>Movement()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -451,12 +433,6 @@ Additional Inherited Members</h2></td></tr>
           <td>(</td>
           <td class="paramtype">ConsoleKey&#160;</td>
           <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ref <a class="el" href="class_jewel_collector_1_1_map.html">Map</a>&#160;</td>
-          <td class="paramname"><em>map</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -506,56 +482,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="aca45124610e8214b463dc8603edc75bb" name="aca45124610e8214b463dc8603edc75bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca45124610e8214b463dc8603edc75bb">&#9670;&#160;</a></span>coordCache</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> cy coordCache</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a57fb1c7101876f6543275979d9a179cb" name="a57fb1c7101876f6543275979d9a179cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57fb1c7101876f6543275979d9a179cb">&#9670;&#160;</a></span>coordTemp</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> dy coordTemp</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af905a9989361d094908ad04e08f6429d" name="af905a9989361d094908ad04e08f6429d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af905a9989361d094908ad04e08f6429d">&#9670;&#160;</a></span>cx</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> cx</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="acf7b1eeaec82cea9545a783b47e16ad1" name="acf7b1eeaec82cea9545a783b47e16ad1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acf7b1eeaec82cea9545a783b47e16ad1">&#9670;&#160;</a></span>displayName</h2>
 
@@ -578,24 +504,16 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a6a0d40b2ed6d9e674f93396212f0028f" name="a6a0d40b2ed6d9e674f93396212f0028f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a0d40b2ed6d9e674f93396212f0028f">&#9670;&#160;</a></span>dx</h2>
+<a id="a3232be5641593172a96a22d0efde3a9f" name="a3232be5641593172a96a22d0efde3a9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3232be5641593172a96a22d0efde3a9f">&#9670;&#160;</a></span>phasePoints</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> dx</td>
+          <td class="memname"><a class="el" href="class_jewel_collector_1_1_coordinate.html#a61569f2965b7a369eb10b6d75d410d11">int</a> phasePoints</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -630,7 +548,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/<a class="el" href="_robot_8cs.html">Robot.cs</a></li>
+<li>G:/eBooks/_Extecamp/jewel-collector-2.0/src/<a class="el" href="_robot_8cs.html">Robot.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

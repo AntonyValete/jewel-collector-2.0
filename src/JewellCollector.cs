@@ -14,6 +14,9 @@
 using System.Collections.ObjectModel;
 namespace JewelCollector
 {
+    /// <summary>
+    /// Class: JewelCollector Starter with Main() function.
+    /// </summary>
     class JewelCollector
     {
         static void Main(string[] args)

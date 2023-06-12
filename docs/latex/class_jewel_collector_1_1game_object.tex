@@ -15,36 +15,26 @@ Inheritance diagram for game\+Object\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_jewel_collector_1_1game_object_afcfaa39f2ad89f79f1a102dced8db7e6}{game\+Object}} (\mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}, \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}, bool \mbox{\hyperlink{class_jewel_collector_1_1game_object_a8796f00bd2cdaa2055ab82bbccbd67b6}{passable}}, bool \mbox{\hyperlink{class_jewel_collector_1_1game_object_a4344f0c7b243fef4096651525cd9f8c7}{collectable}})
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor\+: game\+Object constructor. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_jewel_collector_1_1game_object_a63f6f212ce6b12d4c3b45cc7bc27664c}{get\+Collectable}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Method\+: get\+Collectable will return the passable attribute to the caller. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_jewel_collector_1_1game_object_aeba5d22eeb4bf611b793e43269b711d9}{get\+Collected}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Method\+: get\+Collected will return the passable attribute to the caller. \end{DoxyCompactList}\item 
 abstract string \mbox{\hyperlink{class_jewel_collector_1_1game_object_a29f1cea3f044aac007f6c01613ec0a53}{get\+Display\+Name}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Abstract method\+: get\+Display\+Name is abstract method that has to be implemented in all direct subclasses. This helps to garantee that all subclasses has this implementation. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_jewel_collector_1_1game_object_ade7f5fae37594c7fffa1a5b410b6fa39}{get\+Passable}} ()
-\item 
-bool \mbox{\hyperlink{class_jewel_collector_1_1game_object_a006e45beb96f1d7c3d29553eb2009a9e}{set\+Collected}} (bool Collected)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Method\+: get\+Passable will return the passable attribute to the caller. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jewel_collector_1_1game_object_acbdaf32f2d113003d55443384e16f81f}{set\+Collected}} (bool Collected)
+\begin{DoxyCompactList}\small\item\em Method\+: set\+Collected will set the collected attribute. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_jewel_collector_1_1_coordinate}{Coordinate}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a0afb385911604bff77eb67e6e9f439a9}{Coordinate}} (\mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}, \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}})
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor\+: Coordinate constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_ae74f5eacbecb291fdc7692e25c6905d4}{get\+Coordinate}} ()
 \item 
 void \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a78b30912a83b6b5356d7ec1e8f59e117}{set\+Coordinate}} (\mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}, \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}})
 \begin{DoxyCompactList}\small\item\em Method\+: Set the coordinates of given object. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Public Attributes}
-\begin{DoxyCompactItemize}
-\item 
-readonly \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1game_object_a7d6dc9456f21b10b99412913c02f9e49}{energy\+Points}}
-\end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_jewel_collector_1_1_coordinate}{Coordinate}}}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}}
-\begin{DoxyCompactList}\small\item\em Method\+: This will return the coordinates of given object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
@@ -61,6 +51,12 @@ bool \mbox{\hyperlink{class_jewel_collector_1_1game_object_a8796f00bd2cdaa2055ab
 \item 
 \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_jewel_collector_1_1_coordinate}{Coordinate}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}}
+\begin{DoxyCompactList}\small\item\em Method\+: This will return the coordinates of given object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -75,6 +71,10 @@ Class\+: game\+Object class starter. Inherits from Coordinate.
 
 
 
+Constructor\+: game\+Object constructor. 
+
+
+
 \doxysubsection{Member Function Documentation}
 \Hypertarget{class_jewel_collector_1_1game_object_a63f6f212ce6b12d4c3b45cc7bc27664c}\label{class_jewel_collector_1_1game_object_a63f6f212ce6b12d4c3b45cc7bc27664c} 
 \index{gameObject@{gameObject}!getCollectable@{getCollectable}}
@@ -82,18 +82,39 @@ Class\+: game\+Object class starter. Inherits from Coordinate.
 \doxysubsubsection{\texorpdfstring{getCollectable()}{getCollectable()}}
 {\footnotesize\ttfamily bool get\+Collectable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Method\+: get\+Collectable will return the passable attribute to the caller. 
+
+\begin{DoxyReturn}{Returns}
+Bool\+: Object collectable attribute.
+\end{DoxyReturn}
 \Hypertarget{class_jewel_collector_1_1game_object_aeba5d22eeb4bf611b793e43269b711d9}\label{class_jewel_collector_1_1game_object_aeba5d22eeb4bf611b793e43269b711d9} 
 \index{gameObject@{gameObject}!getCollected@{getCollected}}
 \index{getCollected@{getCollected}!gameObject@{gameObject}}
 \doxysubsubsection{\texorpdfstring{getCollected()}{getCollected()}}
 {\footnotesize\ttfamily bool get\+Collected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Method\+: get\+Collected will return the passable attribute to the caller. 
+
+\begin{DoxyReturn}{Returns}
+Bool\+: Object collected attribute.
+\end{DoxyReturn}
 \Hypertarget{class_jewel_collector_1_1game_object_a29f1cea3f044aac007f6c01613ec0a53}\label{class_jewel_collector_1_1game_object_a29f1cea3f044aac007f6c01613ec0a53} 
 \index{gameObject@{gameObject}!getDisplayName@{getDisplayName}}
 \index{getDisplayName@{getDisplayName}!gameObject@{gameObject}}
 \doxysubsubsection{\texorpdfstring{getDisplayName()}{getDisplayName()}}
 {\footnotesize\ttfamily abstract string get\+Display\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
+
+
+Abstract method\+: get\+Display\+Name is abstract method that has to be implemented in all direct subclasses. This helps to garantee that all subclasses has this implementation. 
+
+\begin{DoxyReturn}{Returns}
+String\+: Object display name.
+\end{DoxyReturn}
 
 
 Implemented in \mbox{\hyperlink{class_jewel_collector_1_1_empty_a5ee08c326c597e046917d3c9980ac576}{Empty}}, \mbox{\hyperlink{class_jewel_collector_1_1_red_jewel_a5ee08c326c597e046917d3c9980ac576}{Red\+Jewel}}, \mbox{\hyperlink{class_jewel_collector_1_1_green_jewel_a5ee08c326c597e046917d3c9980ac576}{Green\+Jewel}}, \mbox{\hyperlink{class_jewel_collector_1_1_blue_jewel_a5ee08c326c597e046917d3c9980ac576}{Blue\+Jewel}}, \mbox{\hyperlink{class_jewel_collector_1_1_tree_a5ee08c326c597e046917d3c9980ac576}{Tree}}, \mbox{\hyperlink{class_jewel_collector_1_1_water_a5ee08c326c597e046917d3c9980ac576}{Water}}, \mbox{\hyperlink{class_jewel_collector_1_1_radioactive_a5ee08c326c597e046917d3c9980ac576}{Radioactive}}, and \mbox{\hyperlink{class_jewel_collector_1_1_robot_a5ee08c326c597e046917d3c9980ac576}{Robot}}.
@@ -104,20 +125,22 @@ Implemented in \mbox{\hyperlink{class_jewel_collector_1_1_empty_a5ee08c326c597e0
 \doxysubsubsection{\texorpdfstring{getPassable()}{getPassable()}}
 {\footnotesize\ttfamily bool get\+Passable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\Hypertarget{class_jewel_collector_1_1game_object_a006e45beb96f1d7c3d29553eb2009a9e}\label{class_jewel_collector_1_1game_object_a006e45beb96f1d7c3d29553eb2009a9e} 
+
+
+Method\+: get\+Passable will return the passable attribute to the caller. 
+
+\begin{DoxyReturn}{Returns}
+Bool\+: Object passable attribute.
+\end{DoxyReturn}
+\Hypertarget{class_jewel_collector_1_1game_object_acbdaf32f2d113003d55443384e16f81f}\label{class_jewel_collector_1_1game_object_acbdaf32f2d113003d55443384e16f81f} 
 \index{gameObject@{gameObject}!setCollected@{setCollected}}
 \index{setCollected@{setCollected}!gameObject@{gameObject}}
 \doxysubsubsection{\texorpdfstring{setCollected()}{setCollected()}}
-{\footnotesize\ttfamily bool set\+Collected (\begin{DoxyParamCaption}\item[{bool}]{Collected }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void set\+Collected (\begin{DoxyParamCaption}\item[{bool}]{Collected }\end{DoxyParamCaption})}
 
 
 
-\doxysubsection{Member Data Documentation}
-\Hypertarget{class_jewel_collector_1_1game_object_a7d6dc9456f21b10b99412913c02f9e49}\label{class_jewel_collector_1_1game_object_a7d6dc9456f21b10b99412913c02f9e49} 
-\index{gameObject@{gameObject}!energyPoints@{energyPoints}}
-\index{energyPoints@{energyPoints}!gameObject@{gameObject}}
-\doxysubsubsection{\texorpdfstring{energyPoints}{energyPoints}}
-{\footnotesize\ttfamily readonly \mbox{\hyperlink{class_jewel_collector_1_1_coordinate_a61569f2965b7a369eb10b6d75d410d11}{int}} energy\+Points}
+Method\+: set\+Collected will set the collected attribute. 
 
 
 
@@ -144,4 +167,4 @@ Implemented in \mbox{\hyperlink{class_jewel_collector_1_1_empty_a5ee08c326c597e0
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-src/\mbox{\hyperlink{game_object_8cs}{game\+Object.\+cs}}\end{DoxyCompactItemize}
+G\+:/e\+Books/\+\_\+\+Extecamp/jewel-\/collector-\/2.\+0/src/\mbox{\hyperlink{game_object_8cs}{game\+Object.\+cs}}\end{DoxyCompactItemize}
