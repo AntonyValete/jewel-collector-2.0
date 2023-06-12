@@ -8,6 +8,9 @@ namespace JewelCollector
         private int x { get; set; }
         private int y { get; set; }
 
+        /// <summary>
+        /// Constructor: Coordinate constructor.
+        /// </summary>
         public Coordinate(int x, int y)
         {
             this.x = x;

@@ -81,18 +81,25 @@ namespace JewelCollector
             } while (gameRunning == true);
         }
 
+
+        /// <summary>
+        /// Method: GetRandomCoordinates will generates unique tuples of coodinates given a range. This is helpful not to place gameObjects at the same spot.
+        /// </summary>
         private static List<(int, int)> GetRandomCoordinates(int to, int numberOfElements, int from = 1)
         {
             Random rnd = new Random();
             HashSet<(int, int)> temp = new HashSet<(int, int)>();
             for (int i = 0; i < numberOfElements; i++)
-                while (!temp.Add((rnd.Next(from, to), rnd.Next(from, to))));
+                while (!temp.Add((rnd.Next(from, to), rnd.Next(from, to)))) ;
             return temp.ToList();
         }
 
+        /// <summary>
+        /// Method: newphase will generates a new phase of the game once all jewels had been collected from the last phase.
+        /// </summary>
         static (Robot, Map, Collection<gameObject>) newphase(Map map)
         {
-            Collection<gameObject> gameObjectCollection = new Collection<gameObject>() {};
+            Collection<gameObject> gameObjectCollection = new Collection<gameObject>() { };
             int mapDimension = map.map.GetLength(0) + 1;
             int Ratio = (mapDimension * mapDimension) * 18 / 100;
             int JewelRatio = (mapDimension * mapDimension) * 6 / 100;
@@ -102,14 +109,14 @@ namespace JewelCollector
 
             var uniqueCoordinates = GetRandomCoordinates(mapDimension, Ratio);
             Random rnd = new Random(Guid.NewGuid().GetHashCode());
-            int x, y, type, j = 0;           
-            
+            int x, y, type, j = 0;
+
             // Populate map with Jewel
             for (int i = 0; i < JewelRatio; i++)
             {
                 type = rnd.Next(3);
                 (x, y) = uniqueCoordinates[j++];
-                switch (type) 
+                switch (type)
                 {
                     case 0:
                         gameObjectCollection.Add(new RedJewel(x, y));
@@ -126,7 +133,7 @@ namespace JewelCollector
             {
                 type = rnd.Next(2);
                 (x, y) = uniqueCoordinates[j++];
-                switch (type) 
+                switch (type)
                 {
                     case 0:
                         gameObjectCollection.Add(new Tree(x, y));
